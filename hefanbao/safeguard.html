@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的盒饭宝 盒饭中国</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/hefanbao.foucs.js" type="text/javascript"></script>
+<script src="js/hefan-dialog.js" type="text/javascript"></script>
+<script>
+//首页交易操作弹框效果
+function deltrede(id){
+	$.hfDialog.confirm("您真的要删除本条交易记录吗?","提示",function(){$("#"+id).parents("li").fadeOut();return true;})
+}
+</script>
+</head>
+<body><!--盒饭宝顶部导航开始-->
+<div id="topbar">
+<div class="s_nav">
+<ul class="s_nl">
+<li><a href="javascript:;" class="login">请登录</a></li>
+<li><a href="javascript:;">免费注册</a></li>
+<li class="s_menu"><a href="javascript:;">你好，王先生</a><i><u></u><em></em></i><ul class="s_down user">
+<li><a href="javascript:void(0)"><img src="images/upload/user_head.gif" width="80" height="80" /></a><span><b>上午好，王先生</b><u>会员等级：<a href="javascript:void(0);">普通会员</a></u><u class="opt"><a href="javascript:void(0);">帐号管理</a><a href="javascript:void(0);">退出</a></u></span></li>
+</ul></li>
+<li class="sprit">|</li>
+<li class="s_menu"><a href="javascript:;">消息</a><strong>1</strong><i><u></u><em></em></i><ul class="s_down msg">
+<li><a href="javascript:void(0)">您有一份盒饭订单没有付款</a></li>
+<li><a href="javascript:void(0)" class="bold">您刚刚通过手机验证找回了密码</a></li>
+<!--没有消息时提示信息-->
+<li class="mt">您暂时没有消息哦！</li>
+<li class="m"><a href="javascript:void(0)">消息中心</a></li></ul></li>
+</ul>
+<ul class="s_nr">
+<li class="s_menu"><a href="javascript:;">我的盒饭</a><i><u></u><em></em></i><ul class="s_down"><a href="javascript:void(0)">已订购的美食</a><a href="javascript:void(0)">我的点评</a><a href="javascript:void(0)">安全设置</a></ul></li>
+<li class="s_menu"><a href="javascript:;">我的餐桌</a><strong>5</strong><i><u></u><em></em></i><ul class="s_down mydesk">
+<li><a href="javascript:void(0)"><img src="images/upload/dl02.jpg" width="50" /></a><span><a href="javascript:void(0)">超好吃果麦冰激淋</a><font>&#165;12</font></span><a href="javascript:void(0)">删除</a></li>
+<li><a href="javascript:void(0)"><img src="images/upload/dl02.jpg" width="50" /></a><span><a href="javascript:void(0)">提拉米苏</a><font>&#165;12</font></span><a href="javascript:void(0)">删除</a></li>
+<li><a href="javascript:void(0)"><img src="images/upload/dl02.jpg" width="50" /></a><span><a href="javascript:void(0)">超好吃果麦冰激淋</a><font>&#165;12</font></span><a href="javascript:void(0)">删除</a></li>
+<li class="yl"><a href="p22_mytable.html">查看我的餐桌</a></li>
+<!--我的餐桌没有的时候显示下面提示-->
+<li class="nl">您的餐桌上没有美食哦<a href="p22_mytable.html">查看我的餐桌</a></li></ul></li>
+<li class="s_menu favorite"><a href="javascript:;">收藏夹</a><i><u></u><em></em></i><ul class="s_down"><a href="javascript:void(0)">收藏的美食</a><a href="javascript:void(0)">收藏的餐厅</a></ul></li>
+<li class="s_menu"><a href="javascript:;">商家中心</a><i><u></u><em></em></i><ul class="s_down"><a href="javascript:void(0)">我的订单管理</a><a href="javascript:void(0)">出售中的美食</a><a href="javascript:void(0)">我的点评管理</a><a href="javascript:void(0)">商家营销服务</a></ul></li>
+<li class="sprit">|</li>
+<li><a href="p20_mobile_show.html">手机版</a></li>
+<li><a href="msmap.html">美食地图</a></li>
+<li><a href="p21_site_map.html">网站地图</a></li>
+<li class="sprit">|</li>
+<li class="s_menu"><a href="javascript:;">联系客服</a><i><u></u><em></em></i><ol class="s_down"><a href="javascript:void(0)">帮助中心</a></ol></li>
+</ul>
+</div>
+</div>
+<!--盒饭宝顶部导航结束-->
+
+<!--盒饭宝导航栏开始-->
+<div id="head">
+<div class="head_center">
+<div class="logo"><a href="index.html"><img src="images/index/index_logo.png" /></a></div>
+<div class="nav">
+<ul>
+<li class="index"><a href="index.html" class="index">首页</a><b>◆</b><u>◆</u></li>
+<li><a href="record.html">交易明细</a><b>◆</b><u>◆</u></li>
+<li class="li_select"><a href="safeguard.html">支付保障</a><b>◆</b><u>◆</u></li>
+<li><a href="javascript:void(0)">安全设置</a><b>◆</b><u>◆</u></li>
+<li><a href="fundmanage.html">资金管理</a><b>◆</b><u>◆</u></li>
+</ul>
+</div>
+</div>
+</div>
+<!--盒饭宝导航栏结束-->
+<!--盒饭宝主体内容开始-->
+<div style="background:#fff" id="content">
+<!--盒饭宝右边内容开始-->
+<div class="safepay">
+<h2 class="tab"><span>账户资金</span><b>安全支付保障，让您使用更放心！</b></h2>
+<ul class="safeguard">
+<li class="moneyok"><b></b><u>您的帐户已受到资金安全支付保障！</u></li>
+<li><b></b><span><u>余额支付保障</u><br />当您帐户中的余额被盗或有异常，且您符合余额保障条件，盒饭宝将向您补偿全部或部分被盗款项。<br /><a href="#">查看详细&gt;&gt;</a></span></li>
+<li class="error"><b></b><span><u>第三方支付保障</u><br />当您使用支付宝、财付通等第三方网站支付平台时资金被盗，请尽快联系第三方平台查看，我们将不作补偿。</span></li>
+<li><b></b><span><u>手机支付保障</u><br />当您使用盒饭手机平台(客户端)进行支付时引起的资金损失，请您立即致电向我们反馈，经核实并通过审核后将向您补偿全部或部分被盗款项。</span></li>
+<li class="error"><b></b><span><u>网上银行支付(含信用卡)</u><br />当您使用网上银行支付时资金被盗，我们将不作补偿，请您尽快联系银行查看操作详情。</span></li>
+<li class="step"><strong>注：</strong>如发现账号资金有异常请立即致电<font color="#ff0000">0734-8965264</font>或咨询客服，我们会根据您提供的资料描述或凭证在3-5个工作日进行核实处理，合符保障条件者通知并进行补偿，以上未提及的支付方式所发生的异常损失我们不作补偿。</li>
+</ul>
+</div>
+<div class="clearfix"></div>
+</div>
+<!--盒饭宝主体内容结束-->
+<!--盒饭宝底部内容开始-->
+<div id="footer">&copy; 2013 盒饭网 <a href="#">联系客服</a></div>
+</body>
+</html>

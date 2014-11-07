@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>盒饭宝－提现</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/hefanbao.foucs.js" type="text/javascript"></script>
+<script src="js/jquery.validate.js" type="text/javascript"></script>
+<script>
+$(function(){
+$("#form1").validate({
+		success: function(label) {
+        		label.html("<u class=\"tip\"><i></i></u>");
+				},
+		rules: {
+			cashmoney: {
+				required:true,
+				number:true
+				},
+			cash_pass: {
+				required:true,
+			 	minlength: 6
+			}
+		},
+		messages: {
+			cashmoney: {
+				required:"<u class=\"err\"><em>◆<u>◆</u></em><i></i>请输入提现金额！</u>",
+				number:"<u class=\"err\"><em>◆<u>◆</u></em><i></i>金额格式不对！</u>"
+				},
+			cash_pass: {
+				required:"<u class=\"err\"><em>◆<u>◆</u></em><i></i>请输入支付密码！</u>",
+				minlength:"<u class=\"err\"><em>◆<u>◆</u></em><i></i>支付密码不能小于6位数！</u>"
+				}
+		},
+		errorPlacement: function(error, element) {
+			if(element.is(":input[name=cashmoney]")){error.appendTo(element.parent())}
+			else if(element.is(":input[name=cash_pass]")){error.appendTo(element.parent().parent())};
+		}
+	});   
+})
+</script>
+</head>
+<body>
+<!--盒饭宝头部内容开始-->
+<div id="pay_head">
+<ul><font style="font-size:28px;font-family:microsoft yahei;color:#f60">盒饭宝</font></ul>
+<h2>提现</h2>
+<ul class="rightbar">盒饭宝账户：tianhefan@126.com<span>|</span><a href="javascript:;" class="re_help">帮助中心</a><br /><a href="index.html">进入我的盒饭宝</a><span>|</span><a href="javascript:;">提现记录</a></ul>
+</div>
+<!--主体内容开始-->
+<form action="return_ok.html" method="post" id="form1">
+<div id="drawcash">
+<ul><h3>可提现余额：<font>5236.00</font><u>元</u><span><a href="bankcard_add.html">添加银行卡</a> | <a href="mybankcard.html">管理银行卡</a></span></h3>
+<h4>选择银行卡(不选为默认银行卡)：</h4>
+<li class="card"><span id="1" class="default"><b class="boc" title="中国银行">张三</b><u>6222 7209 **** 924<font>已选择</font><br /><em>限额2000元/天</em></u></span>
+<span id="2"><b class="icbc" title="中国工商银行">刘小丽</b><u>6222 7209 **** 924<font>已选择</font><br /><em>限额2000元/天</em></u></span>
+<span id="3"><b class="ccb" title="中国建设银行">王小曲</b><u>6222 7209 **** 924<font>已选择</font><br /><em>限额2000元/天</em></u></span>
+<span id="4"><b class="ccb" title="中国建设银行">王小贱</b><u>6222 7209 **** 924<font>已选择</font><br /><em>限额2000元/天</em></u></span>
+<!--当没有银行卡时显示-->
+<span class="add" onclick="location.href='bankcard_add.html'"><span><i></i><em></em></span><br /><a href="bankcard_add.html">添加银行卡</a></span>
+<input type="hidden" name="bankcard" value="1" />
+</li>
+<li class="cash_money">提现金额：<input type="text" name="cashmoney" />元</li>
+<li class="mtime">到账时间：<label><input type="radio" name="cashtime" checked="checked" />三日内到账<font>(免费)</font></label><label><input type="radio" name="cashtime" />12小时内到账<font>(服务费按提现金额的0.15%收取)</font></label></li>
+<li class="cashpass">支付密码：<b><input type="password" name="cash_pass" /></b></li>
+<li class="save"><input type="submit" value="确定提现" class="cashok" /></li>
+</ul>
+</div>
+</form>
+<!--盒饭宝底部内容开始-->
+<div id="footer">&copy; 2013 盒饭网 <a href="#">联系客服</a></div>
+</body>
+</html>

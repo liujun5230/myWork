@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的盒饭宝 盒饭中国</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/hefanbao.foucs.js" type="text/javascript"></script>
+<script src="js/hefan-dialog.js" type="text/javascript"></script>
+<style type="text/css">
+.valid{margin-bottom:-20px}
+.valid li{padding-bottom:10px;color:#808080}
+.valid li .correction{padding:5px 3px;width:150px;border:#c8c8c8 1px solid}
+.err{display:none;margin-left:53px;margin-top:8px}
+.trede_ok .tx{padding-bottom:12px;font-size:14px;color:#666;line-height:20px}
+.trede_ok .pout{width:190px;border:#abadb3 1px solid;margin:0 auto;margin-bottom:-10px}
+.trede_ok .pout .paypass{padding:3px;margin:1px;*margin:0 1px;width:180px;border:#686868 1px solid;border-bottom-color:#e2e2e2;border-right-color:#e2e2e2}
+.trede_ok .err{margin-top:16px;margin-left:20px;margin-bottom:-5px}
+#send{width:275px}#send h4{height:35px;line-height:35px;color:#333;font-weight:bold;font-size:12px;border-bottom:#e6e6e6 1px solid;position:relative}
+#send h4 b{width:18px;height:18px;line-height:18px;text-align:center;color:#f30;display:inline-block;border:2px solid #f30;vertical-align:middle;font-family:microsoft yahei;border-radius:18px;position:absolute;top:8px;right:5px}
+#send ul{*zoom:1;overflow:hidden;margin-top:8px}
+#send ul li{*zoom:1;overflow:hidden;border-bottom:#e9e9e9 1px solid;padding:0 12px}
+#send ul .t{background:#f9f9f9}#send ul .p{text-align:right;height:32px;line-height:32px;border:0;}#send ul .p font{color:#f60;font-weight:bold;font-family:Tahoma,microsoft yahei;padding-right:4px}
+#send ul li span{height:28px;line-height:28px;float:left;width:40%;display:block;color:#404040}
+#send ul li .s1{width:30%;text-align:right}#send .costom li b{color:#666;font-weight:normal}
+#send .costom li{line-height:26px;border:0;color:#404040}
+#obligate{width:250px;margin:-30px 0 -20px -19px;}#obligate u{color:#808080;display:block;line-height:18px;padding-top:5px;padding-bottom:10px}
+#obligate textarea{width:240px;height:80px;overflow:hidden;overflow-y:auto;border:#ccc 1px solid;padding:3px;font-size:14px;line-height:20px}
+#obligate h4{height:35px;line-height:35px;color:#333;font-weight:bold;font-size:12px;border-bottom:#e6e6e6 1px solid;position:relative;*margin-top:-30px}
+#obligate h4 b{width:18px;height:18px;line-height:18px;text-align:center;color:#f30;display:inline-block;border:2px solid #f30;vertical-align:middle;font-family:microsoft yahei;border-radius:18px;position:absolute;top:8px;right:5px}
+#obligate ul{*zoom:1;overflow:hidden;margin-top:8px}
+#obligate ul li{overflow:hidden;border-bottom:#e9e9e9 1px solid;padding:0 12px}
+#obligate ul li b{color:#666;font-weight:normal}
+#obligate ul li{line-height:26px;border:0;color:#404040}
+#obligate ul .err{margin-left:6px}
+#obligate ul .err u{color:#fff;padding:0;line-height:normal;}
+</style>
+<script>
+//首页交易操作弹框效果
+function deltrede(id){
+	$.hfDialog.confirm("您真的要删除本条交易记录吗?","提示",function(){$("#"+id).parents("li").fadeOut();return true;})
+}
+//交易订单验证
+function trede_valid(id,t,c){
+	var html="<ul class=\"valid\"><li>交易号："+t+"</li><li>消费券："+c+"</li><li>验证码：<input type=\"text\" name=\"correction\" class=\"correction\" /><span class=\"err\"><em>◆<u>◆</u></em><i></i>请输入您的客户验证码！</span></li></ul>";
+	var submit=function(){
+		if($(".correction").val()==""){$(".correction").focus().next().css("display","inline-block");return false};
+		//开始异步验证本单交易code...
+		if($(".correction").val()!="123456"){$(".correction").focus().next().css("display","inline-block").html("<em>◆<u>◆</u></em><i></i>验证码错误，请重新输入！");return false};
+		$.hfDialog.alert('订单验证成功','success');
+		$("#"+id).fadeOut().next().fadeOut();
+		$("#"+id).parent().prev().text('交易成功');
+		return true;};
+	$.hfDialog.show(html,{title:"交易订单验证",width:280,btnText:"验证",clstitle:true,clsfood:true},submit);
+}
+//确认消费
+function trede_ok(id){
+	var html="<ul class=\"trede_ok\"><li class=\"tx\">输入支付密码确认后，资金将会直接打到商家账户，确定消费了吗？</li><li class=\"pout\"><input type=\"password\" name=\"paypass\" class=\"paypass\" /></li><span class=\"err\"><em>◆<u>◆</u></em><i></i>请输入您的支付密码！</span></ul>";
+	var submit=function(){
+		if($(".paypass").val()==""){$(".paypass").focus().parent().next().css("display","inline-block");return false};
+		//开始异步验证本单交易code...
+		if($(".paypass").val()!="123456"){$(".paypass").focus().parent().next().css("display","inline-block").html("<em>◆<u>◆</u></em><i></i>支付密码错误，请重新输入！");return false};
+		$.hfDialog.alert('订单验证成功','success');
+		$("#"+id).fadeOut();
+		$("#"+id).parent().prev().text('交易成功');
+		return true;};
+	$.hfDialog.show(html,{title:"确认消费",width:250,btnText:"确定",clstitle:true,clsfood:true},submit);
+}
+//配送
+function peisong(id){
+	var html="<div style=\"margin:-40px 0 -40px -32px\"><!--startprint--><div id=\"send\">";
+	html+="<h4>配送单(东方快餐)<b>网</b></h4>";
+	html+="<ul><li class=\"t\"><span>名称</span><span class=\"s1\">数量(份)</span><span class=\"s1\">价格(元)</span></li>";
+	html+="<li><span>小炒肉</span><span class=\"s1\">1</span><span class=\"s1\">12</span></li>";
+	html+="<li><span>苦瓜炒肉</span><span class=\"s1\">2</span><span class=\"s1\">10</span></li>";
+	html+="<li><span>小炒肉</span><span class=\"s1\">1</span><span class=\"s1\">12</span></li>";
+	html+="<li class=\"p\">实收款：<font>32</font>元</li>";
+	html+="</ul>";
+	html+="<h4>客户信息</h4>";
+	html+="<ul class=\"costom\">";
+	html+="<li><b>真实姓名：</b>黄小仙</li>";
+	html+="<li><b>联系号码：</b>15096051365</li>";
+	html+="<li><b>联系地址：</b>衡阳市新时代宾馆13楼</li>";
+	html+="<li><b>验&nbsp;&nbsp;证&nbsp;&nbsp;码：</b>________________</li>";
+	html+="<li><b>客户签字：</b>________________</li>";
+	html+="<li><b>订单编号：</b>6535984682246</li>";
+	html+="<li><b>下单时间：</b>2013.08.18 11:32</li>";
+	html+="</ul></div><!--endprint--></div>";
+	var submit=function(){
+		doPrint();history.go(0);
+		return true};
+	$.hfDialog.show(html,{title:"配送",width:300,btnText:"配送打印",clstitle:false,clsfood:true,showClose:false},submit);
+}
+//配送打印
+function doPrint(){ 
+bdhtml=window.document.body.innerHTML; 
+sprnstr="<!--startprint-->"; 
+eprnstr="<!--endprint-->"; 
+prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17); 
+prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr)); 
+window.document.body.innerHTML=prnhtml;
+window.print();}
+//客户预留
+function obligate(id){
+	var html="<div id=\"obligate\">";
+		html+="<h4>预留说明(邦特咖啡)<b>网</b></h4>";
+		html+="<ul>";
+		html+="<textarea name=\"otxt\" id=\"otxt\"></textarea><span class=\"err\"><em>◆<u>◆</u></em><i></i>请输入预留说明！</span>";
+		html+="<u>样例：已为您预留好本店32号包厢，预留时间为2个小时，请于8点前到店消费，谢谢合作！</u>";
+		html+="</ul>";
+		html+="<h4 style=\"*margin-top:0\">客户信息</h4>";
+		html+="<ul>";
+		html+="<li><b>真实姓名：</b>黄小仙</li>";
+		html+="<li><b>联系号码：</b>15096051365</li>";
+		html+="<li><b>联系地址：</b>衡阳市新时代宾馆13楼</li>";
+		html+="<li><b>订单编号：</b>6535984682246</li>";
+		html+="<li><b>下单时间：</b>2013.08.24 16:25</li>";
+		html+="</ul>";
+		html+="</div>";
+	var submit=function(){
+		if($("#otxt").val()==""){$("#otxt").focus().next().css("display","inline-block");return false};
+		//开始异步验证本单交易code...
+		$.hfDialog.alert('订单预留成功，请尽快为客户准备...','success');
+		$("#"+id).fadeOut();
+		$("#"+id).parent().prev().text('等待验证');
+		return true;};
+	$.hfDialog.show(html,{btnText:"确认预留",width:270,clstitle:false,showClose:false,clsfood:true},submit);
+};
+/*IE10 hack for this dom ==>"#user_bg .user_info .Translucent_bg" */
+$(function(){if (window.matchMedia("screen and (-ms-high-contrast: active), (-ms-high-contrast: none)").matches) {$(".Translucent_bg").addClass('ie10');}})
+</script>
+
+</head>
+<body>
+<!--盒饭宝顶部导航开始-->
+<div id="topbar">
+<div class="s_nav">
+<ul class="s_nl">
+<li><a href="javascript:;" class="login">请登录</a></li>
+<li><a href="javascript:;">免费注册</a></li>
+<li class="s_menu"><a href="javascript:;">你好，王先生</a><i><u></u><em></em></i><ul class="s_down user">
+<li><a href="javascript:void(0)"><img src="images/upload/user_head.gif" width="80" height="80" /></a><span><b>上午好，王先生</b><u>会员等级：<a href="javascript:void(0);">普通会员</a></u><u class="opt"><a href="javascript:void(0);">帐号管理</a><a href="javascript:void(0);">退出</a></u></span></li>
+</ul></li>
+<li class="sprit">|</li>
+<li class="s_menu"><a href="javascript:;">消息</a><strong>1</strong><i><u></u><em></em></i><ul class="s_down msg">
+<li><a href="javascript:void(0)">您有一份盒饭订单没有付款</a></li>
+<li><a href="javascript:void(0)" class="bold">您刚刚通过手机验证找回了密码</a></li>
+<!--没有消息时提示信息-->
+<li class="mt">您暂时没有消息哦！</li>
+<li class="m"><a href="javascript:void(0)">消息中心</a></li></ul></li>
+</ul>
+<ul class="s_nr">
+<li class="s_menu"><a href="javascript:;">我的盒饭</a><i><u></u><em></em></i><ul class="s_down"><a href="javascript:void(0)">已订购的美食</a><a href="javascript:void(0)">我的点评</a><a href="javascript:void(0)">安全设置</a></ul></li>
+<li class="s_menu"><a href="javascript:;">我的餐桌</a><strong>5</strong><i><u></u><em></em></i><ul class="s_down mydesk">
+<li><a href="javascript:void(0)"><img src="images/upload/dl02.jpg" width="50" /></a><span><a href="javascript:void(0)">超好吃果麦冰激淋</a><font>&#165;12</font></span><a href="javascript:void(0)">删除</a></li>
+<li><a href="javascript:void(0)"><img src="images/upload/dl02.jpg" width="50" /></a><span><a href="javascript:void(0)">提拉米苏</a><font>&#165;12</font></span><a href="javascript:void(0)">删除</a></li>
+<li><a href="javascript:void(0)"><img src="images/upload/dl02.jpg" width="50" /></a><span><a href="javascript:void(0)">超好吃果麦冰激淋</a><font>&#165;12</font></span><a href="javascript:void(0)">删除</a></li>
+<li class="yl"><a href="p22_mytable.html">查看我的餐桌</a></li>
+<!--我的餐桌没有的时候显示下面提示-->
+<li class="nl">您的餐桌上没有美食哦<a href="p22_mytable.html">查看我的餐桌</a></li></ul></li>
+<li class="s_menu favorite"><a href="javascript:;">收藏夹</a><i><u></u><em></em></i><ul class="s_down"><a href="javascript:void(0)">收藏的美食</a><a href="javascript:void(0)">收藏的餐厅</a></ul></li>
+<li class="s_menu"><a href="javascript:;">商家中心</a><i><u></u><em></em></i><ul class="s_down"><a href="javascript:void(0)">我的订单管理</a><a href="javascript:void(0)">出售中的美食</a><a href="javascript:void(0)">我的点评管理</a><a href="javascript:void(0)">商家营销服务</a></ul></li>
+<li class="sprit">|</li>
+<li><a href="p20_mobile_show.html">手机版</a></li>
+<li><a href="msmap.html">美食地图</a></li>
+<li><a href="p21_site_map.html">网站地图</a></li>
+<li class="sprit">|</li>
+<li class="s_menu"><a href="javascript:;">联系客服</a><i><u></u><em></em></i><ol class="s_down"><a href="javascript:void(0)">帮助中心</a></ol></li>
+</ul>
+</div>
+</div>
+<!--盒饭宝顶部导航结束-->
+<!--盒饭宝导航栏开始-->
+<div id="head">
+<div class="head_center">
+<div class="logo"><a href="index.html"><img src="images/index/index_logo.png" /></a></div>
+<div class="nav">
+<ul>
+<li class="index li_select"><a href="index.html" class="index">首页</a><b>◆</b><u>◆</u></li>
+<li><a href="record.html">交易明细</a><b>◆</b><u>◆</u></li>
+<li><a href="safeguard.html">支付保障</a><b>◆</b><u>◆</u></li>
+<li><a href="javascript:void(0)">安全设置</a><b>◆</b><u>◆</u></li>
+<li><a href="fundmanage.html">资金管理</a><b>◆</b><u>◆</u></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="user_bg">
+<div class="user_info">
+<div class="Translucent_bg"></div>
+<ul>
+<li class="u_face"><a class="uface_a" href="javascript:void(0)"><img src="images/userhead.gif" /></a></li>
+<li class="u_name">早上好，<a class="uname_a" href="javascript:void(0)">毛毛虫</a></li>
+<li class="u_number">帐户名：<i>189****7800</i></li>
+<li class="u_level">会员等级：<a class="level_icon" href="javascript:void(0)"></a></li>
+</ul>
+
+<h3>美好的一天又开始了,伸个懒腰，去奋斗吧!</h3>
+</div>
+</div>
+<!--盒饭宝导航栏结束-->
+<!--盒饭宝主体内容开始-->
+<div id="content">
+<!--上部开始-->
+<div class="c_top">
+<div class="money_balance">
+<ul>
+<li class="money">
+<b>帐户余额：</b><font>5000.45</font>元&nbsp;&nbsp;&nbsp;&nbsp;不可用余额：<a href="freezemoney.html">1000</a>元&nbsp;&nbsp;[<u id="explain" isindex="true">?</u>]
+<div class="explain"><ul>不可用余额为服务保障金或暂时被冻结资金</ul><u><em>◆</em><i>◆</i></u></div>
+</li>
+<li>
+<a class="a" href="recharge.html">充值</a>
+<a class="a b_btn" href="drawcash.html">提现</a>
+<a class="a b_btn" href="paymentdetails.html">交易明细</a>
+</li>
+</ul>
+</div>
+<div class="safe_level">
+<ul><li class="safe">安全等级：<a href="javascript:void(0)"><b><u style="width:90px"></u></b><font class="green">高</font></a></li>
+<li class="auth">
+<span class="sfrz"><b class="ok"></b><a href="javascript:void(0);" class="ok">已认证</a>
+<div class="explain"><ul>您已经通过盒饭中国实名认证，<a href="javascript:void(0)">查看</a></ul><u><em>◆</em><i>◆</i></u></div>
+</span>
+<span class="szzs"><b></b><a href="javascript:void(0)">未安装</a>
+<div class="explain"><ul>您还没有安装数字证书，<a href="javascript:void(0)">安装</a></ul><u><em>◆</em><i>◆</i></u></div>
+</span>
+<span class="sjrz"><b class="ok"></b><a href="javascript:void(0);" class="ok">已绑定</a><!--认证通过a,b的class为ok-->
+<div class="explain"><ul>您已绑定手机:15689636524 <a href="javascript:void(0)">修改</a></ul><u><em>◆</em><i>◆</i></u></div>
+</span></li>
+</ul>
+</div>
+<div class="bank_card">
+<p><b></b>银行卡<i>1</i>张<a href="javascript:void(0)">管理</a></p>
+</div>
+</div>
+<!--上部结束-->
+
+<!--盒饭宝下部内容开始-->
+<div class="c_btm">
+<div class="t_tab">
+<span class="r_mobilepay hover">手机快捷充值<b>◆</b></span><span class="r_trade">交易记录<b>◆</b></span>
+</div>
+<div class="mobilepay">
+<div>
+<a class="ten ten_hover" href="javascript:void(0)">10元</a>
+<a class="ten" href="javascript:void(0)">20元</a>
+<a class="ten" href="javascript:void(0)">30元</a>
+<a class="select" href="javascript:;"><font>50元</font><b class="chrome"><em>◆</em><u>◆</u></b>
+<div class="downlist"><i id="1">100元</i><i id="2">200元</i><i id="3">300元</i></div><input type="hidden" name="paymoney" value="1"/></a>
+<font class="price">优惠价：<i>28.99-29.60</i>元</font>
+</div>
+<div style="margin-top:20px;clear:both">
+<label><input type="text" value="可填写移动、联通、电信的手机号"/><a href="">充值</a></label>
+</div>
+
+<div class="tips">
+<p>1、月底月初到帐时间稍有迟延。</p>
+<p>2、如需要发票,请在付款前咨询<a href="javascript(0)">[商家]</a></p>
+<a href="javascript(0)">查看更多帮助>></a>
+</div>
+</div>
+
+<div class="traderecode">
+<ul style="margin:0" class="tradelist">
+<h2><b>最近交易</b><a href="paymentdetails.html">收支明细</a><span>|</span><a href="rechargerecord.html">充值记录</a><span>|</span><a href="paymentrecord.html">提现记录</a><span>|</span> <a href="javascript:void(0)">退款记录</a></h2>
+<!--显示最近8条交易-->
+<li><span class="time">2013.08.18</span><span class="title"><a href="javascript:void(0);">香菇肉沫烧冬瓜饭</a></span><span class="com">东方快餐厅</span><span class="payout">-15.00</span><span class="state">交易成功</span><span class="views"><a href="javascript:void(0);">详情</a></span></li>
+<li><span class="time">2013.08.18</span><span class="title"><a href="javascript:void(0);">香菇肉沫烧冬瓜饭</a></span><span class="com">黄小仙</span><span class="payin">+15.00</span><span class="state">交易成功</span><span class="views"><a href="javascript:void(0);">详情</a></span></li>
+<li><span class="time">2013.08.18</span><span class="title"><a href="javascript:void(0);">香菇肉沫烧冬瓜饭</a></span><span class="com">东方快餐厅</span><span class="paywait">-15.00</span><span class="state">待付款</span><span class="views"><a href="payment.html" class="acbtn" target="_blank">付款</a><a href="javascript:void(0);">详情</a></span></li>
+<li><span class="time">2013.08.18</span><span class="title"><a href="javascript:void(0);">香菇肉沫烧冬瓜饭</a></span><span class="com">黄小仙</span><span class="paywait">+15.00</span><span class="state">等待对方付款</span><span class="views"><a href="javascript:void(0);">详情</a></span></li>
+<li><span class="time">2013.08.18</span><span class="title"><a href="javascript:void(0);">香菇肉沫烧冬瓜饭</a></span><span class="com">东方快餐厅</span><span class="payout">-15.00</span><span class="state">等待商家配送</span><span class="views"><a href="javascript:void(0);">详情</a></span></li>
+<li><span class="time">2013.08.18</span><span class="title"><a href="javascript:void(0);">香菇肉沫烧冬瓜饭</a></span><span class="com">黄小仙</span><span class="payin">+15.00</span><span class="state">等待配送</span><span class="views"><a href="javascript:void(0);" class="acbtn" id="p1" onclick="peisong('p1')">配送</a><a href="javascript:void(0);">详情</a></span></li>
+<li><span class="time">2013.08.18</span><span class="title"><a href="javascript:void(0);">香菇肉沫烧冬瓜饭</a></span><span class="com">东方快餐厅</span><span class="payout">-15.00</span><span class="state">等待商家验证</span><span class="views"><a href="javascript:void(0);" class="acbtn" id="o1" onclick="trede_ok('o1');">确认消费</a><a href="javascript:void(0);">详情</a></span></li>
+<li><span class="time">2013.08.18</span><span class="title"><a href="javascript:void(0);">香菇肉沫烧冬瓜饭</a></span><span class="com">黄小仙</span><span class="payin">+15.00</span><span class="state">等待验证</span><span class="views"><a href="javascript:void(0);" class="acbtn" id="v1" onclick="trede_valid('v1','2013081511001000870033800797','365985695682654');">验证</a><a href="javascript:void(0);" class="acbtn" id="y1" onclick="obligate('y1')">预留</a><a href="javascript:void(0);">详情</a></span></li>
+<li><span class="time">2013.08.18</span><span class="title"><a href="javascript:void(0);">香菇肉沫烧冬瓜饭</a></span><span class="com">黄小仙</span><span class="payin">+15.00</span><span class="state">退款订单</span><span class="views"><a href="javascript:void(0);">详情</a></span>
+<div class="clearfix"></div><h3><span class="backt">退款给客户</span><span class="payout">-15.00</span><span class="state">退款中</span><span class="views"></span></h3></li>
+<li><span class="time">2013.08.18</span><span class="title"><a href="javascript:void(0);">香菇肉沫烧冬瓜饭</a></span><span class="com">黄小仙</span><span class="paywait">+15.00</span><span class="state">交易关闭</span><span class="views"><a href="javascript:void(0);">详情</a></span><div class="clearfix"></div><h3><span class="backt">退款给客户</span><span class="paywait">-15.00</span><span class="state"></span><span class="views"></span></h3></li>
+<li><span class="time">2013.08.18</span><span class="title"><a href="javascript:void(0);">香菇肉沫烧冬瓜饭</a></span><span class="com">东方快餐厅</span><span class="payout">-15.00</span><span class="state">等待商家验证</span><span class="views"><a href="javascript:void(0);" class="acbtn">确认消费</a><a href="javascript:void(0);">详情</a></span></li>
+<li><span class="time">2013.08.18</span><span class="title"><a href="javascript:void(0);">香菇肉沫烧冬瓜饭</a></span><span class="com">黄小仙</span><span class="payin">+18.80</span><span class="state">等待验证</span><span class="views"><a href="javascript:void(0);" class="acbtn">验证</a><a href="javascript:void(0);">详情</a></span></li>
+<li><span class="time">2013.08.18</span><span class="title"><a href="javascript:void(0);">香菇肉沫烧冬瓜饭</a></span><span class="com">东方快餐厅</span><span class="payout">-18.80</span><span class="state">交易关闭</span><span class="views"><a href="javascript:void(0);">详情</a><a href="javascript:void(0);" onclick="deltrede(1)" id="1">删除</a></span>
+<div class="clearfix"></div><h3><span class="backt">退款</span><span class="payin">+15.00</span><span class="state">&nbsp;</span><span class="views"><a href="javascript:void(0);">查看</a></span></h3></li>
+<li><span class="time">2013.08.18</span><span class="title"><a href="javascript:void(0);">香菇肉沫烧冬瓜饭</a></span><span class="com">黄小仙</span><span class="paywait">+15.00</span><span class="state">交易关闭</span><span class="views"><a href="javascript:void(0);">详情</a><a href="javascript:void(0);" onclick="deltrede(2)" id="2">删除</a></span></li>
+<li class="more">Hi：您最近有<a href="javascript:void(0);">8笔</a>交易等待处理！<a href="javascript:void(0);">查看所有交易明细&gt;&gt;</a></li>
+</ul>
+</div>
+<div class="clearfix"></div>
+</div>
+<!--盒饭宝下部内容结束-->
+<!--盒饭宝广告内容开始-->
+<div class="ad_banner"><img src="images/index/ad.jpg" /></div>
+<!--盒饭宝广告内容结束-->
+</div>
+<!--盒饭宝主体内容结束-->
+<!--盒饭宝底部内容开始-->
+<div id="footer">&copy; 2013 盒饭网 <a href="javascript:void(0)">联系客服</a></div>
+</body>
+</html>

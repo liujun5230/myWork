@@ -1,0 +1,491 @@
+﻿/*hefanbao Style
+Create date:2013-12-09
+CSS Document Reset*/
+div,ul,ol,li,img,p,h1,h2,h3,h4,b,u,em,i,font,span,s,iframe,form,input,table,th,td,label{font-size:12px;font-style:normal;font-weight:normal;background:none;margin:0;padding:0;border:0;outline:0;list-style:none;text-align:left;text-decoration:none;white-space:normal;letter-spacing:normal;line-height:normal;}
+body{font-family:Arial,\5b8b\4f53,simsun;margin:0;padding:0;background:#f8f8f8;text-align:center;}
+a{padding:0;margin:0;color:#08c;text-decoration:none;outline:none;blur:expression(this.onFocus=this.blur());}
+a:hover{text-decoration:underline}a:focus{outline:none;}
+/*clear float*/
+.clearfix{clear:both;font-size:0;height:0px;overflow:hidden;}
+/*top style start*/
+#topbar{height:30px;background:#25292d;border-bottom:#eee 1px solid;}
+#topbar .s_nav{width:990px;margin:0 auto;overflow:visible;*zoom:1}
+#topbar .s_nav .s_nl{float:left}#topbar .s_nav .s_nr{float:right}
+#topbar .s_nav ul li{height:30px;line-height:28px;line-height:32px\9;*line-height:30px;padding:0 2px 0 5px;float:left;overflow:hidden}
+#topbar .s_nav ul .sprit{line-height:28px;color:#9c9c9c;padding:0 5px}
+#topbar .s_nav .s_nr .sprit{padding:0 5px}#topbar .s_nav ul li a{margin-left:5px;}
+#topbar .s_nav ul .s_menu{position:relative;border:1px #25292d solid;border-top:0;border-bottom:0;overflow:visible;z-index:10}
+#topbar .s_nav ul .s_menu a{margin:0 5px 0 5px;*display:inline-block;*vertical-align:middle;}
+#topbar .s_nav ul .s_menu strong{color:#f40;font-family:Helvetica,arial,sans-serif;margin:0 5px 0 -4px;display:inline-block;vertical-align:top;*vertical-align:auto;}
+#topbar .s_nav ul li a{color:#9c9c9c;text-decoration:none;margin-right:8px;}
+#topbar .s_nav ul li a:hover{color:#f40}
+#topbar .s_nav ul li a.login{color:#ef0101;margin-left:-5px;margin-right:0}
+#topbar .s_nav ul .favorite a{background:url(../images/topbar_bg.gif) 0 2px no-repeat;padding-left:16px;background-position:0 0px\9;*background-position:0 8px}
+#topbar .s_nav ul .favorite a:hover{background-position:0 -21px;background-position:0 -23px\9;*background-position:0 -15px}
+#topbar .s_nav ul .s_menu i{display:inline-block;position:relative;vertical-align:middle;margin-right:8px;margin-top:-1px\9;_margin-top:0;width:6px;height:6px;-webkit-transition:.3s ease-in;-moz-transition:.3s ease-in;-o-transition:.3s ease-in;transition:.3s ease-in;}
+#topbar .s_nav ul .s_menu i u,#topbar .s_nav ul .s_menu i em{position:absolute;top:0;left:0;width:0;height:0;border-width:3px 3px 0;border-style:solid;border-color:rgba(255,255,255,0);border-color:transparent\9;_border-color:tomato;_filter:chroma(color=tomato);overflow:hidden;*zoom:1}
+#topbar .s_nav ul .s_menu i u{top:1px;border-top-color:#6c6c6c}
+#topbar .s_nav ul .s_menu i em{border-top-color:#25292d}
+#topbar .s_nav ul .s_hover{height:31px;background:#fff;border-color:#eee;cursor:pointer;_margin-bottom:-1px}
+#topbar .s_nav ul .s_hover i{margin-top:-3px;margin-top:0px\9;_margin-top:-3px;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg);-ms-transform:rotate(0)}
+#topbar .s_nav ul .s_hover i u,#topbar .s_nav ul .s_hover i em{top:2px\9;border-width:0 3px 3px\9;_border-width:0 4px 4px;}
+#topbar .s_nav ul .s_hover i u{top:1px\9;border-bottom-color:#6c6c6c\9}
+#topbar .s_nav ul .s_hover i em{border-top-color:#fff;border-bottom-color:#fff\9}
+#topbar .s_nav ul .s_menu .s_down{display:none;padding:5px 2px 5px 5px;cursor:default}
+#topbar .s_nav ul .s_hover .s_down{display:block;position:absolute;top:31px;left:-1px;background:#fff;border:#eee 1px solid;border-top:0;}
+#topbar .s_nav ul .s_hover .s_down li{display:block;height:auto;line-height:normal;padding:0;margin:0;float:none;overflow:visible}
+#topbar .s_nav ul .s_hover .s_down a{display:block;background:#fff;height:28px;line-height:28px;padding:0 8px 0 10px;margin:0;white-space:nowrap;margin:0 -2px 0 -5px}
+#topbar .s_nav ul .s_hover .s_down a:hover{background:#f6f6f6}
+#topbar .s_nav ul .s_hover .user li{height:80px;padding:10px 10px 5px 6px;white-space:nowrap;_margin-bottom:-3px;}
+#topbar .s_nav ul .s_hover .user li a{width:80px;margin:0;padding:0;display:inline-block;vertical-align:top;line-height:normal;}
+#topbar .s_nav ul .s_hover .user li a:hover{background:none;text-decoration:underline}
+#topbar .s_nav ul .s_hover .user li span{line-height:18px;display:inline-block;vertical-align:top;margin:0 8px;}
+#topbar .s_nav ul .s_hover .user li span b{height:auto;line-height:normal;font:14px microsoft yahei,simhei;color:#6c6c6c;display:block;padding:0;white-space:nowrap;float:none}
+#topbar .s_nav ul .s_hover .user li span u{position:static;color:#6c6c6c;display:block;white-space:nowrap;padding-top:5px;text-overflow:ellipsis;_margin-top:3px;}
+#topbar .s_nav ul .s_hover .user li span u a{width:auto;height:auto;line-height:normal;color:#9c9c9c;margin-top:2px;_margin-top:0;}
+#topbar .s_nav ul .s_hover .user li span u a:hover{color:#f40}
+#topbar .s_nav ul .s_hover .user li span .opt a{color:#6c6c6c;margin-right:12px}
+#topbar .s_nav ul .s_hover .msg li{height:28px;line-height:22px;line-height:26px\9;padding:0 8px;white-space:nowrap;color:#6c6c6c;margin-left:-5px}
+#topbar .s_nav ul .s_hover .msg li a{display:block;margin:0 -20px 0 -8px;position:relative;padding-right:9px}
+#topbar .s_nav ul .s_hover .msg li .bold{font-weight:bold}
+#topbar .s_nav ul .s_hover .msg .m{line-height:normal;border-top:#eee 1px solid;margin:8px 8px 0 5px;*margin-top:7px;padding:0 8px 0 0;}
+#topbar .s_nav ul .s_hover .msg .mt{text-indent:2px;margin-bottom:-8px}
+#topbar .s_nav ul .s_hover .msg .m a{height:12px;line-height:normal;display:inline-block;padding-left:16px;margin:7px 0 0;margin-top:9px\9;background:url(../images/topbar_bg.gif) 0 -42px no-repeat;background-position:0 -44px\9}
+#topbar .s_nav ul .s_hover .msg .m a:hover{background:url(../images/topbar_bg.gif) 0 -58px no-repeat;background-position:0 -60px\9}
+#topbar .s_nav ul .s_hover .mydesk{padding-top:10px;}
+#topbar .s_nav ul .s_hover .mydesk li{padding:10px 12px 3px 9px;white-space:nowrap;*margin-bottom:-3px;*zoom:1}
+#topbar .s_nav ul .s_hover .mydesk li a{height:auto;margin:0;padding:0;display:inline-block;vertical-align:top;line-height:normal;}
+#topbar .s_nav ul .s_hover .mydesk li a:hover{background:none;text-decoration:underline}
+#topbar .s_nav ul .s_hover .mydesk li span{width:120px;line-height:18px;display:inline-block;vertical-align:top;margin:0 8px 0 5px;white-space:normal;}
+#topbar .s_nav ul .s_hover .mydesk li span a{width:auto;height:auto;line-height:normal;white-space:normal;}
+#topbar .s_nav ul .s_hover .mydesk li span font{display:block;color:#9c9c9c;font-family:Helvetica,arial,sans-serif;color:#f40;margin-top:2px}
+#topbar .s_nav ul .s_hover .mydesk .nl{padding:8px 8px 10px 8px;*padding-bottom:13px;white-space:nowrap;color:#3c3c3c;}
+#topbar .s_nav ul .s_hover .mydesk .yl{padding:0;margin:10px 12px 8px 9px;text-align:right;border-top:#eee 1px solid;}
+#topbar .s_nav ul .s_hover .mydesk .yl a{height:20px;line-height:20px;display:inline-block;background:#f40;color:#fff;font-weight:normal;padding:0 4px;border-radius:2px;margin-top:12px}
+#topbar .s_nav ul .s_hover .mydesk .yl a:hover{background:#f60;text-decoration:none}
+#topbar .s_nav ul .s_hover .mydesk .nl a{height:20px;line-height:20px;display:inline-block;vertical-align:middle;background:#f40;color:#fff;font-weight:normal;padding:0 4px;border-radius:2px;margin-left:8px;}
+#topbar .s_nav ul .s_hover .mydesk .nl a:hover{background:#f60;text-decoration:none}
+/*head style start*/
+#head{border-bottom:#ccc 1px solid;}
+.head_center{width:990px;height:75px;margin:0 auto;_overflow:hidden;}
+#head .logo{margin:27px 0px 14px 2px;float:left;_display:inline;}
+#head .nav{float:right;height:76px;overflow:hidden;_height:70px;_margin-top:6px;_position:relative;_z-index:0;}
+#head .nav ul{padding:42px 12px 18px 0px;overflow:hidden;}
+#head .nav ul li{float:left;margin-left:40px;display:inline;position:relative;z-index:0;}
+#head .nav ul li a{font-family:microsoft yahei;color:#4D4D4D;font-size:18px;font-weight:100;float:left}
+#head .nav ul li a:hover{color:#ff4400;text-decoration:none;}
+#head .nav ul li b{display:none;position:absolute;bottom:-21px;color:#ccc;font-size:16px;left:50%;line-height:21px;margin-left:-10px;width:13px;}
+#head .nav ul li u{display:none;position:absolute;bottom:-23px;color:#f8f8f8;font-size:16px;left:50%;line-height:22px;margin-left:-10px;width:13px;}
+#head .nav ul .index u{color:#8293b0;}
+#head .nav ul .li_select a{color:#ff4400;}
+#head .nav ul .li_select b,#head .nav ul .li_select u{display:block}
+/*payment head style start*/
+#pay_head{width:990px;height:56px;margin:0 auto;overflow:hidden;}
+#pay_head ul{margin:8px 0 15px 2px;padding-right:10px;float:left;_display:inline;}
+#pay_head h2{color:#666;font-size:18px;font-family:microsoft yahei,simhei;float:left;padding-left:10px;margin-top:16px;border-left:#e6e6e6 1px solid;}
+#pay_head .rightbar{float:right;_display:inline;padding:0;padding-top:8px;margin:0;color:#333;line-height:20px;text-align:right}
+#pay_head .rightbar span{color:#999;padding:0 8px}
+/*banner style start*/
+#user_bg{width:100%;height:150px;margin:0 auto;background:url(../images/index/background.png) center 0 no-repeat #617b85;overflow:hidden;position:relative;z-index:1;}
+#user_bg .user_info{width:990px;margin:0 auto;position:relative;overflow:hidden;}
+#user_bg .user_info ul{width:260px;height:95px;margin-top:28px;float:left;display:block;border:#fff 1px solid;position:relative;z-index:1;}
+#user_bg .user_info ul .u_face{float:left;padding:4px 5px 0 14px;}
+#user_bg .user_info .Translucent_bg{position:absolute;top:28px;left:0px;width:262px;height:97px;background:rgba(255,255,255,0.8);background:#fff\9;filter:alpha(opacity=80)\9;}
+#user_bg .user_info .ie10{background:rgba(255,255,255,0.8);}
+#user_bg .user_info ul .uface_a{width:80px;height:80px;display:block;border:#fff 3px solid;border-radius:50%;overflow:hidden;}
+#user_bg .user_info ul .uface_a img{width:80px;height:80px;display:block;}
+#user_bg .user_info ul li{font-family:simsun;font-size:12px;color:#555;line-height:22px;text-indent:12px;}
+#user_bg .user_info ul .u_name{font-family:simsun;font-size:14px;color:#333;line-height:32px;margin-top:6px;}
+#user_bg .user_info ul li i{font-family:tahoma;}#user_bg .user_info ul li .uname_a{color:#333}#user_bg .user_info ul li .uname_a:hover{ text-decoration:none;color:#ff4400}
+#user_bg .user_info ul li .level_icon{display:inline-block;width:38px;height:14px; background:url(../images/user_grade_icon.gif) 0 -18px no-repeat; vertical-align:middle}
+#user_bg .user_info h3{color:#fff;float:right;padding:118px 44px 0 0;font-family:microsoft yahei;font-weight:300;font-size:16px;}
+/*content style start*/
+#content{width:990px;margin:12px auto 0 auto;}
+/*Account money style*/
+#content .c_top{height:140px;margin:0 auto;border:#e3e3e3 1px solid; background:#fff;overflow:hidden;}
+#content .c_top div{width:250px;height:140px;border-right:#ddd 1px dashed;float:left;}
+#content .c_top .money_balance{width:456px;padding-left:30px;}
+#content .c_top .money_balance li{color:#666;margin:0px}#content .c_top .money_balance li u{color:#7cae23;cursor:help}
+#content .c_top .money_balance li font{color:#ff4400;font-size:28px;font-family:Tahoma, Geneva, sans-serif;padding:0 4px 0 0px;display:inline-block}
+#content .c_top .money_balance li.money{padding:25px 0 4px;white-space:nowrap;position:relative}
+#content .c_top .money_balance li.money b{font-family:simsun;font-size:14px;color:#333;}
+#content .c_top .money_balance li.money a{font-family:microsoft yahei;margin-right:2px}
+#content .c_top .money_balance .a{padding:0 24px;height:30px;margin-top:15px;line-height:30px;text-align:center;margin-right:10px;display:block;float:left;border:#ff6600 1px solid;border-radius:2px;color:#fff;background:#ff7c00;font-family:simsun;font-size:14px;box-shadow:1px 1px 1px #eee; }
+#content .c_top .money_balance .a:hover{text-decoration:none;background:#ff9318}
+#content .c_top .money_balance .b_btn{border-color:#d5d5d5;color:#333;background:#fcfcfc;} 
+#content .c_top .money_balance .b_btn:hover{background:#f6f6f6}
+/*c_top safe level style*/
+#content .c_top .safe_level{padding-top:20px;}
+#content .c_top .safe_level ul{width:84%;margin:0 auto;padding:10px;*padding-bottom:6px}
+#content .c_top .safe_level ul li{display:block;overflow:hidden;*zoom:1}
+#content .c_top .safe_level .safe{color:#808080;padding:12px 0}
+#content .c_top .safe_level .safe a{display:inline-block;*vertical-align:middle;}
+#content .c_top .safe_level .safe a b{height:8px;width:120px;display:inline-block;vertical-align:middle;background:#c2c2c2;font-size:0;border-radius:5px;border:#bbb 1px solid;border-top-color:#999;border-left-color:#999;position:relative;}
+#content .c_top .safe_level .safe a b u{height:10px;display:inline-block;background:#6dc00b;font-size:0;overflow:hidden;border-radius:5px;border-right:#6c9801 1px solid;position:absolute;left:-1px;top:-1px}
+#content .c_top .safe_level .safe a font{margin-left:5px;color:#6dc00b}#content .c_top .safe_level .safe a .red{color:#ff000}#content .c_top .safe_level .safe a .yellow{color:#F93}
+#content .c_top .safe_level .auth{height:30px;overflow:visible;}
+#content .c_top .safe_level .auth span{width:60px;height:30px;line-height:24px;float:left;display:block;margin-right:15px;text-align:center;position:relative;}
+#content .c_top .safe_level .auth span a.ok{color:#808080;text-decoration:none;cursor:default}
+#content .c_top .safe_level .auth .sfrz b{width:18px;height:15px;display:inline-block;background:url(../images/hefanbao_ico.gif) -34px -125px no-repeat;margin-right:3px;vertical-align:middle;}
+#content .c_top .safe_level .auth .sfrz b.ok{background-position:-57px -125px;}
+#content .c_top .safe_level .auth .szzs b{width:18px;height:15px;display:inline-block;background:url(../images/hefanbao_ico.gif) -46px -145px no-repeat;margin-right:3px;vertical-align:middle;}
+#content .c_top .safe_level .auth .szzs b.ok{background-position:-69px -145px}
+#content .c_top .safe_level .auth .sjrz b{width:12px;height:16px;display:inline-block;background:url(../images/hefanbao_ico.gif) 0 -124px no-repeat;margin-right:3px;vertical-align:middle;}
+#content .c_top .safe_level .auth .sjrz b.ok{background-position:-17px -124px}
+#content .c_top .safe_level .auth .sjrz{margin:0px}
+/*explain style*/
+#content .explain{width:auto;height:28px;padding:2px;background:#fbf2e9;position:absolute;top:-38px;left:0;display:none;}
+#content .explain ul{width:auto;_width:1%;height:28px;line-height:28px;border:#ffbb76 1px solid;padding:0 10px;color:#db7c22;background:#fffcef;white-space:nowrap;}
+#content .explain ul a{color:#0088cc;}
+#content .c_top .explain{width:auto;height:28px;padding:2px;background:#fbf2e9;position:absolute;top:-38px;left:0;display:none;}
+#content .c_top .explain ul{width:auto;_width:1%;height:28px;line-height:28px;border:#ffbb76 1px solid;padding:0 10px;color:#db7c22;background:#fffcef;white-space:nowrap;}
+#content .explain u{height:14px;height:14px;display:block;position:absolute;top:25px;left:28px;overflow:hidden;}
+#content .explain u em{height:14px;height:14px;font-size:14px;font-family:simsun;font-style:normal;display:block;overflow:hidden;line-height:normal;color:#fffcef;position:absolute;top:-1px;left:0}
+#content .explain u i{height:14px;height:14px;font-size:14px;font-family:simsun;font-style:normal;display:block;overflow:hidden;line-height:normal;color:#ffbb76;margin-top:0px;}
+#content .c_top .bank_card{border-right:none;padding-top:63px;}
+#content .c_top .bank_card p{font-size:14px;color:#333;text-indent:30px;}
+#content .c_top .bank_card p a{color:#0088cc;margin-left:20px;}
+#content .c_top .bank_card p b{margin:-3px 4px 0 0;display:inline-block;width:16px;height:12px;background:url(../images/hefanbao_ico.gif) -80px -125px no-repeat; background-color:#999;vertical-align:middle;}
+#content .c_top .bank_card p i{font-size:14px;font-family:tahoma;color:#ff4400;}
+/*hfb_index btm style*/
+#content .c_btm{margin-top:10px;}
+#content .c_btm .t_tab{background:#f5f5f5;height:36px;border:#ddd 1px solid;border-bottom:none;padding:1px;overflow:hidden;}
+#content .c_btm .t_tab span{cursor:pointer;height:36px;line-height:36px;padding:0 20px;display:block;float:left;color:#0088cc;position:relative}
+#content .c_btm .t_tab span b{display:block;}
+#content .c_btm .t_tab .hover{background:#e3e3e3;color:#666;font-size:14px;}
+#content .c_btm .t_tab .hover b{position:absolute;top:28px;font-size:14px;left:50%;margin-left:-6px;color:#f5f5f5}
+/*mobilepay style*/
+#content .c_btm .mobilepay{height:134px;padding:36px 0 0 30px;background:#fff;border:#ddd 1px solid;position:relative;}
+#content .c_btm .mobilepay .select{display:inline-block;float:left;border:#ddd 1px solid;width:66px;padding:1px;margin-right:10px;vertical-align:middle;position:relative;text-decoration:none;background:#fff}
+#content .c_btm .mobilepay .select font{color:#333;height:33px;line-height:33px;display:block;text-indent:12px;cursor:pointer;}
+#content .c_btm .mobilepay .select:hover{border-color:#bbb;color:#000;}#content .c_btm .mobilepay .select:hover b u{color:#000}
+#content .c_btm .mobilepay .select b{height:14px;height:14px;display:block;position:absolute;top:10px;left:51px;overflow:hidden}
+@media screen and (-webkit-min-device-pixel-ratio:0){#content .c_btm .mobilepay .select .chrome{top:8px;}}
+#content .c_btm .mobilepay .select b em{height:14px;height:14px;font-size:9px;font-family:tahoma;font-style:normal;display:block;overflow:hidden;line-height:normal;color:#fff;position:absolute;top:-1px;left:0}
+#content .c_btm .mobilepay .select b u{height:14px;height:14px;font-size:9px;font-family:tahoma;font-style:normal;display:block;overflow:hidden;line-height:normal;color:#666;margin-top:0}
+#content .c_btm .mobilepay .downlist{display:none;min-width:68px;_width:68px;height:auto;border:#ccc 1px solid;background:#fff;position:absolute;left:-1px;top:34px;overflow:hidden}
+#content .c_btm .mobilepay .downlist i{width:100%;display:block;font-size:12px;font-weight:normal;color:#666;padding:5px;margin:0;text-indent:0;cursor:pointer;position:static;overflow:hidden;white-space:nowrap;}
+#content .c_btm .mobilepay .ten{width:58px;height:33px;line-height:33px;display:block;float:left;padding:1px;margin-right:12px;border:#ddd 1px solid;color:#333;text-align:center;}
+#content .c_btm .mobilepay .ten:hover{text-decoration:none;border-color:#bbb}
+#content .c_btm .mobilepay .ten_hover{border:#fd6600 2px solid;padding:0px;background:url(../images/foot_tag.png) right bottom no-repeat}
+#content .c_btm .mobilepay .ten_hover b{top:9px;left:50px}
+#content .c_btm .mobilepay .ten_hover:hover{border:#fd6600 2px solid;}
+#content .c_btm .mobilepay .price{height:33px;line-height:38px;display:block;color:#333;}
+#content .c_btm .mobilepay .price i{color:#ff6600;font-family:Tahoma;font-weight:bold;padding-right:4px;}
+#content .c_btm .mobilepay label{display:block;width:366px;overflow:hidden;}
+#content .c_btm .mobilepay label input{width:272px;height:38px;line-height:38px\9;text-indent:10px;color:#aaa;border:#ddd 1px solid;float:left;}
+#content .c_btm .mobilepay label a{width:76px;height:39px;background:url(../images/pay_btn.png) 0px 0px no-repeat;float:right;border:#ddd 1px solid;color:#333;text-align:center;font-size:14px;line-height:39px}
+#content .c_btm .mobilepay label a:hover{text-decoration:none;background-position:0px -40px}
+#content .c_btm .mobilepay .tips{width:244px;height:82px;padding:20px 0 0 45px;background:url(../images/tips.gif) 0px 0px no-repeat;position:absolute;left:659px;top:24px;}
+#content .c_btm .mobilepay .tips p{margin-bottom:12px;color:#666;font-family:simsun;}#content .c_btm .mobilepay .tips>a{font-family:simsun;}
+/*tradelist style*/
+#content .c_btm .traderecode{display:none}
+#content .tradelist{border:#ddd 1px solid;margin-top:10px;background:#fff;overflow:hidden;*zoom:1}
+#content .tradelist h2{height:32px;line-height:32px;*line-height:30px;background:#fafafa;text-indent:12px;border-bottom:#dee1e3 1px solid;}
+#content .tradelist h2 b{font-size:14px;font-weight:bold;color:#666;margin-right:15px}
+#content .tradelist h2 a{font-size:12px;font-weight:normal}#content .tradelist h2 span{padding:0 8px;color:#ccc}
+#content .tradelist li{border:#e6e6e6 1px solid;border-left:0;border-right:0;padding:15px;display:block;overflow:hidden;*zoom:1;margin-top:-1px;*margin-bottom:-4px}
+#content .tradelist li h3{margin:15px 10px 0 106px;padding-top:10px;border-top:#e0e0e0 1px dashed;}
+#content .tradelist li h3 .backt{width:269px}#content .tradelist li h3 .state{width:114px}
+#content .tradelist li span{display:block;line-height:18px;overflow:hidden;float:left;color:#808080;font-family:tahoma}#content .tradelist li .time{width:15%}
+#content .tradelist li .title{width:18%}#content .tradelist li .title a{color:#4d4d4d}#content .tradelist li .title a:hover{color:#08c}
+#content .tradelist li .com{width:18%}#content .tradelist li .com a{color:#4d4d4d}#content .tradelist li .com a:hover{color:#08c}
+#content .tradelist li .paywait{width:12%;font-weight:bold;font-family:tahoma,arial,Microsoft Yahei,simsun;text-align:right}
+#content .tradelist li .payin{width:12%;color:#53a000;font-weight:bold;font-family:tahoma,arial,Microsoft Yahei,simsun;text-align:right}
+#content .tradelist li .payout{width:12%;color:#f37800;font-weight:bold;font-family:tahoma,arial,Microsoft Yahei,simsun;text-align:right}
+#content .tradelist li .state{width:16%;text-align:right}#content .tradelist li .views{padding-left:30px;white-space:nowrap;margin-right:-20px}#content .tradelist li .views a{margin-right:10px;}
+#content .tradelist li .views .acbtn{display:inline-block;padding:0 8px;background:#f98b3b;border:#ff6701 1px solid;text-decoration:none;color:#fff;box-shadow:0 0 2px rgba(0,0,0,0.1);border-radius:2px;}
+#content .tradelist li .views .acbtn:hover{background:#f60;border-color:#f30}
+#content .tradelist .more{color:#808080;border-bottom:0}#content .tradelist .more a{padding:0 4px;}
+/*ad style start*/
+#content .ad_banner{width:100%;margin:20px auto 25px auto}
+/*hfb_index right style*/
+#content .c_left{width:240px;float:left;}
+#content .c_right{width:740px;float:right;}
+#content .c_right .hefanbao{border:#dee2e5 1px solid;background:#fff;padding-bottom:18px;}
+#content .c_right .hefanbao li{color:#666;margin:0 20px}#content .c_right .hefanbao li u{color:#7cae23;cursor:help}
+#content .c_right .hefanbao li font{color:#333;font-size:28px;font-family:Tahoma, Geneva, sans-serif;padding:0 4px 0 0px;display:inline-block}
+#content .c_right .hefanbao li.money{border-bottom:#f2f2f2 1px solid;padding:15px 0 12px 0;white-space:nowrap;position:relative}
+#content .c_right .hefanbao li.money a{font-family:microsoft yahei;margin-right:2px}
+#content .c_right .hefanbao li.hfb_btn{padding-top:15px}
+#content .c_right .hefanbao li.hfb_btn a{height:22px;line-height:22px;color:#888;padding:0 18px;border:#ccc 1px solid;display:inline-block;margin-right:10px;box-shadow:0 0 2px rgba(0,0,0,0.1);border-radius:2px;}
+#content .c_right .hefanbao li.hfb_btn a:hover{background:#f60;border:#f30 1px solid;text-decoration:none;color:#fff}
+#content .c_right .hefanbao li.hfb_btn .hover{background:#f98b3b;border:#ff6701 1px solid;text-decoration:none;color:#fff}
+#content .c_right .hefanbao li.hfb_btn span{margin-left:15px;}
+#content .c_right .hefanbao li.hfb_btn span a{color:#08c;border:0;background:none;border:0;box-shadow:none;padding:0 0 0 5px}#content .c_right .hefanbao li.hfb_btn span a:hover{color:#08c;background:none;border:0;text-decoration:underline}
+/*footer style start*/
+#footer{width:990px;margin:12px auto 0 auto;border-top:#dfdfdf 1px solid;line-height:35px;color:#666;text-align:center;padding-bottom:10px}
+#footer a{color:#08c;margin-left:8px}
+/*record style*/
+#content .record{width:auto;float:none;*margin-top:-10px}
+#content .record .srh{border:#ddd 1px solid;margin-top:10px;*zoom:1;padding-bottom:15px;background:#fefefe}
+#content .record .srh h2{padding:10px;background:#fafafa;border-bottom:#dee1e3 1px solid;height:18px;overflow:hidden}
+#content .record .srh h2 b{font:16px microsoft yahei,simhei;font-weight:bold;color:#404040;margin-right:15px}#content .record .srh h2 a{font-size:12px;font-weight:normal}
+#content .record .srh h2 span{font-size:12px;font-weight:normal;margin-left:69%;_margin-left:67.5%;}#content .record .srh h2 span font{font-family:tahoma;color:#53a000;font-weight:bold;padding:0 4px}
+#content .record .srh li{padding:0 15px;padding-top:15px}#content .record .srh h2 span a{margin-left:15px}
+#content .record .srh li span{color:#666;vertical-align:middle;font-weight:bold}
+#content .record .srh li .input{height:24px;line-height:24px;padding:0 3px;border:#c8c8c8 1px solid;width:120px;vertical-align:middle;background:#fff}
+#content .record .srh li .input1{height:24px;line-height:24px;padding:0 3px;border:#c8c8c8 1px solid;width:240px;vertical-align:middle;margin-left:-4px;background:#fff}
+#content .record .srh li .select{display:inline-block;border:#ccc 1px solid;width:85px;margin-right:10px;vertical-align:middle;position:relative;text-decoration:none;background:#fff}
+#content .record .srh li .select font{color:#666;height:24px;line-height:24px;display:block;text-indent:5px;cursor:pointer;}
+#content .record .srh li .select:hover{border-color:#7eb4ea;color:#000;box-shadow:0 0 2px rgba(0,0,0,0.1)}#content .record .srh li .select:hover b u{color:#000}
+#content .record .srh li .select b{height:14px;height:14px;display:block;position:absolute;top:2px;left:65px;overflow:hidden}
+#content .record .srh li .select b em{height:14px;height:14px;font-size:14px;font-family:simsun;font-style:normal;display:block;overflow:hidden;line-height:normal;color:#fff;position:absolute;top:-1px;left:0}
+#content .record .srh li .select b u{height:14px;height:14px;font-size:14px;font-family:simsun;font-style:normal;display:block;overflow:hidden;line-height:normal;color:#666;margin-top:0}
+#content .record .srh li .btn{width:90px;height:26px;line-height:20px;color:#fff;vertical-align:middle;border:#ff6701 1px solid;text-align:center;margin-left:10px;cursor:pointer;background:#f98b3b;box-shadow:0 0 2px rgba(0,0,0,0.1);border-radius:2px;margin-left:65px}
+#content .record .srh li .btn:hover{background:#f60;border:#f30 1px solid;text-decoration:none;color:#fff}
+#content .record .tradelist h2{background:#f2f2f2;}
+#content .record .tradelist h2 b{font-size:12px;font-weight:normal;line-height:32px;color:#666;width:7%;display:inline-block;text-align:right}
+#content .record .tradelist h2 .name{width:13%}#content .record .tradelist h2 .other{width:13%}#content .record .tradelist h2 .payfor{width:23.5%}
+#content .record .tradelist h2 .state{width:14.3%;}#content .record .tradelist h2 .operate{width:6%;}
+#content .record .tradelist li h3{margin-left:15%;_margin-left:14.6%;}
+#content .record .tradelist li h3 .backt{width:45.2%}#content .tradelist li h3 .state{width:19.1%;}
+#content .record .tradelist li .views{padding-left:50px}
+#content .record .tradelist li span font{color:#999;display:block;padding-top:3px}
+#content .record .tradelist .page{padding:20px;color:#4d4d4d;border-bottom:0;text-align:right}#content .record .tradelist .page a,#content .record .tradelist .page b{margin-left:8px;}
+/*hefanbao comtent common style*/
+#content .tab{height:44px;border-bottom:#ddd 1px solid;background:#fff;font-family:microsoft yahei;margin-bottom:10px;}
+#content .tab span{width:120px;height:35px;line-height:35px;font-size:16px;text-align:center;color:#333;display:inline-block;border-top:#f98f2e 2px solid;border-left:#ddd 1px solid;border-right:#ddd 1px solid;background:#fff;margin-left:8px;border-top-left-radius:2px;border-top-right-radius:2px;position:relative;top:8px}
+#content .tab b{font-size:20px;color:#cbc9c7;vertical-align:middle;margin-left:15px}
+/*form validate style*/
+.tip{height:14px;display:inline-block;vertical-align:middle;margin-left:8px;color:#404040;font-size:12px}
+.tip i{width:14px;height:14px;display:inline-block;vertical-align:top;background:url(../images/hefanbao_ico.gif) -48px -105px no-repeat;margin-right:3px}
+.err{display:inline-block;border:#ffbb76 1px solid;color:#f40;background:#fffcef;vertical-align:middle;margin-left:13px;position:relative;padding:5px 8px 5px 5px;box-shadow:0 0 2px rgba(0,0,0,0.1);border-radius:2px;}
+.err i{width:14px;height:14px;display:inline-block;background:url(../images/hefanbao_ico.gif) -16px -105px no-repeat;vertical-align:text-bottom;margin-right:5px}
+.err em{color:#ffbb76;width:12px;height:12px;display:block;position:absolute;top:25%;left:-7px;font-family:simsun;font-size:12px}
+.err em u{color:#fffcef;width:12px;height:12px;display:block;position:absolute;top:0;right:-1px;font-family:simsun;font-size:12px}
+/*form validate style end*/
+#content .downlist{display:none;min-width:85px;_width:85px;height:auto;border:#ccc 1px solid;background:#fff;position:absolute;left:-1px;top:24px;overflow:hidden}
+#content .downlist i{width:100%;display:block;font-size:12px;font-weight:normal;color:#666;padding:5px;margin:0;text-indent:0;cursor:pointer;position:static;overflow:hidden;white-space:nowrap;}
+/*safeguard style*/
+#content .safeguard{background:#ffffff;overflow:hidden;*zoom:1}
+#content .safeguard .moneyok{border-bottom:#e6e6e6 1px solid;background:#fff;padding-left:20px;margin-bottom:12px}
+#content .safeguard .moneyok b{width:32px;height:32px;display:inline-block;margin:0;margin-right:8px;vertical-align:middle;background:url(../images/hefanbao_ico.gif) 0 0 no-repeat}
+#content .safeguard .moneyok u{font-size:14px;color:#666;font-weight:bold;display:inline-block;vertical-align:middle;}
+#content .safeguard li{padding:12px;border:0;background:#fff}#content .safeguard li.error{background:#fffcee}#content .safeguard li.error b{background-position:-32px -105px}
+#content .safeguard li b{width:14px;height:14px;display:inline-block;vertical-align:top;margin:1px 8px 0 22px;background:url(../images/hefanbao_ico.gif) -48px -105px no-repeat}
+#content .safeguard li span{width:645px;line-height:20px;display:inline-block;color:#666}#content .safeguard li span u{color:#f60;font-size:14px;font-weight:bold;display:inline-block;padding-bottom:8px}
+#content .safeguard li.step{color:#666;padding-left:35px;line-height:20px}
+/*fundmanage style*/
+#content .m_left{width:185px;background:#fcfcfc;border:#ddd 1px solid}
+#content .m_left ul{min-height:480px;_height:480px;border-right:#f2f2f2 2px solid;padding-top:25px}#content .m_left ul li b{display:none}
+#content .m_left ul li{height:35px;line-height:35px;padding-left:30px}#content .m_left ul li a{color:#666;font-size:14px}#content .m_left ul li a:hover{text-decoration:none}
+#content .m_left ul .select{background:#fff;border:#dee1e3 1px solid;border-left:#f60 3px solid;border-right:0;position:relative;left:-2px;margin-right:-5px;margin-bottom:5px;}
+#content .m_left ul .select a{color:#333;}#content .m_left ul .select b{color:#666;width:12px;height:12px;display:block;position:absolute;top:9px;top:11px\9;right:10px}
+#content .m_left ul .select b u{color:#fff;width:12px;height:12px;display:block;position:absolute;top:0;left:-2px}
+/*fundmanage right style*/
+#content .m_right{width:790px;}#content .m_right .hefanbao{border:0}
+#content .m_right .userstate{border-top:#e6e6e6 1px solid;background:#fff;padding:10px 20px;}
+#content .m_right .userstate li{padding:15px 0 0 0;border:0;background:none;color:#404040}
+#content .m_right .userstate li a{margin-right:12px}#content .m_right .userstate li u{color:#808080}
+#content .m_right .userstate .safe a{display:inline-block;*vertical-align:middle;}
+#content .m_right .userstate .safe a b{height:8px;width:120px;display:inline-block;vertical-align:middle;background:#c2c2c2;font-size:0;border-radius:5px;border:#bbb 1px solid;border-top-color:#999;border-left-color:#999;position:relative;}
+#content .m_right .userstate .safe a b u{height:10px;display:inline-block;background:#6dc00b;font-size:0;overflow:hidden;border-radius:5px;border-right:#6c9801 1px solid;position:absolute;left:-1px;top:-1px}
+#content .m_right .userstate .safe a font{margin-left:5px;color:#6dc00b}#content .m_right .userstate .safe a .red{color:#ff000}#content .m_right .userstate .safe a .yellow{color:#F93}
+#content .m_right .userstate li span{margin-right:15px;display:inlie-block;margin-top:10px;position:relative;}
+#content .m_right .userstate li span a{margin-left:4px;margin-right:0;display:inline-block;vertical-align:middle}#content .m_right .userstate li span a.ok{color:#808080;text-decoration:none;cursor:default}
+#content .m_right .userstate li .sfrz b{width:18px;height:15px;display:inline-block;background:url(../images/hefanbao_ico.gif) -34px -125px no-repeat;vertical-align:middle}
+#content .m_right .userstate li .sfrz b.ok{background-position:-57px -125px}
+#content .m_right .userstate li .szzs b{width:18px;height:15px;display:inline-block;background:url(../images/hefanbao_ico.gif) -46px -145px no-repeat;vertical-align:middle}
+#content .m_right .userstate li .szzs b.ok{background-position:-69px -145px}
+#content .m_right .userstate li .sjrz b{width:12px;height:16px;display:inline-block;background:url(../images/hefanbao_ico.gif) 0 -124px no-repeat;vertical-align:middle}
+#content .m_right .userstate li .sjrz b.ok{background-position:-17px -124px}
+/*paymentdetails style*/
+#content .m_right .srh{width:788px;border:#d3e9c1 1px solid;*zoom:1;background:#fcfcfc}
+#content .m_right .srh h2{padding:10px;background:#f8fff3;border-bottom:#d3e9c1 1px solid;margin-bottom:-1px}#content .m_right .srh h2 span{color:#666;margin-right:12px;margin-left:5px}
+#content .m_right .srh h2 span font{color:#53a000;font-weight:bold;margin-right:5px;font-family:tahoma,arial,Microsoft Yahei,simhei;}#content .m_right .srh h2 span .out{color:#f37800}
+#content .m_right .srh li{padding:0 15px 15px 15px;display:none}#content .m_right .srh li span{width:70px;color:#666;display:inline-block;text-align:right;vertical-align:middle;font-weight:bold}
+#content .m_right .srh .input{height:24px;line-height:24px;padding:0 3px;border:#c8c8c8 1px solid;width:120px;vertical-align:middle;background:#fff}
+#content .m_right .srh .input1{height:24px;line-height:24px;padding:0 3px;border:#c8c8c8 1px solid;width:240px;vertical-align:middle;margin-left:-4px;background:#fff}
+#content .m_right .srh .select{color:#666;display:inline-block;border:#ccc 1px solid;width:85px;margin-right:10px;vertical-align:middle;position:relative;text-decoration:none;background:#fff}
+#content .m_right .srh .select font{height:24px;line-height:24px;display:block;text-indent:5px;cursor:pointer;}
+#content .m_right .srh .select:hover{border-color:#7eb4ea;color:#000;box-shadow:0 0 2px rgba(0,0,0,0.1)}#content .m_right .srh .select:hover b u{color:#000}
+#content .m_right .srh .select b{height:14px;height:14px;display:block;position:absolute;top:2px;left:65px;overflow:hidden}
+#content .m_right .srh .select b em{height:14px;height:14px;font-size:14px;font-family:simsun;font-style:normal;display:block;overflow:hidden;line-height:normal;color:#fff;position:absolute;top:-1px;left:0}
+#content .m_right .srh .select b u{height:14px;height:14px;font-size:14px;font-family:simsun;font-style:normal;display:block;overflow:hidden;line-height:normal;color:#666;margin-top:0}
+#content .m_right .srh .btn{width:90px;height:26px;line-height:20px;color:#fff;vertical-align:middle;border:#ff6701 1px solid;text-align:center;cursor:pointer;background:#f98b3b;box-shadow:0 0 2px rgba(0,0,0,0.1);border-radius:2px;margin-left:70px}
+#content .m_right .srh .btn:hover{background:#f60;border:#f30 1px solid;text-decoration:none;color:#fff}
+#content .m_right .tradelist h2{background:#f2f2f2;}#content .m_right .tradelist h2 b{font-size:12px;font-weight:normal;line-height:32px;color:#666;width:8%;display:inline-block;text-align:right}
+#content .m_right .tradelist h2 .name{width:13%}#content .m_right .tradelist h2 .other{width:33.2%}#content .m_right .tradelist h2 .payfor{width:7.6%}
+#content .m_right .tradelist h2 .state{width:13.5%;}#content .m_right .tradelist h2 .operate{width:9.5%;}#content .m_right .tradelist li .title{width:35%;}#content .m_right .tradelist li .payin{width:10%;}
+#content .m_right .tradelist li .payout{width:10%;}#content .m_right .tradelist li .state{text-align:left;padding-left:35px}#content .m_right .tradelist li .views{padding-left:30px}
+#content .m_right .tradelist li span{color:#565656;}#content .m_right .tradelist li span font{color:#808080;display:block;padding-top:3px;}
+#content .m_right .tradelist .page{padding:20px;color:#4d4d4d;border-bottom:0;text-align:right}#content .m_right .tradelist .page a,#content .m_right .tradelist .page b{margin-left:8px;}
+/*freezemoney style*/
+#content .m_right .freez{border-bottom:0;*border-width:1px}#content .m_right .freez li{padding-top:8px;padding-bottom:8px}#content .m_right .freez h2 .operate{width:auto}
+#content .m_right .freez h2 b{text-align:left;text-indent:5px;*text-indent:9px;width:22.1%}#content .m_right .freez h2 .money{width:10.2%}#content .m_right .freez h2 .state{width:53%}
+#content .m_right .freez li .title{width:25%;font-weight:bold;color:#404040;}#content .m_right .freez li .money{width:8%;font-family:Tahoma,microsoft yahei;}
+#content .m_right .freez li .state{width:53.2%;}#content .text{padding:15px 0 0 0;clear:both}
+#content .m_right .text b{width:14px;height:14px;display:inline-block;vertical-align:top;margin:0 5px 0 5px;background:url(../images/hefanbao_ico.gif) -80px -105px no-repeat}
+#content .m_right .text span{line-height:20px;display:inline-block;color:#666;vertical-align:top;margin-top:-3px}
+/*mybankcard style*/
+#content .m_right .mybankcard{padding-left:8px;margin-top:-8px;margin-right:-28px;*zoom:1;overflow:hidden}
+#content .m_right .mybankcard li{width:240px;height:125px;display:block;float:left;margin:20px 20px 0 0;border:#ddd 1px solid;vertical-align:middle;background:#fff;overflow:hidden;position:relative}
+#content .m_right .mybankcard li b{width:220px;height:36px;line-height:36px;color:#666;text-align:right;display:block;background:#fff url(../images/bankico.png) no-repeat;margin:10px 8px 0 8px;border-bottom:#f2f2f2 1px solid}
+#content .m_right .mybankcard li u{display:block;padding-left:15px;margin-top:5px;font:12px microsoft yahei,simhei,sans-serif;color:#404040}#content .m_right .mybankcard li u .fd{margin-left:25px}#content .m_right .mybankcard li u .fc{margin-left:60px}
+#content .m_right .mybankcard li u em{color:#999;margin-right:8px}#content .m_right .mybankcard li u font{display:inline-block;background:#f2f2f2;color:#808080;padding:1px 3px;margin-right:8px;}
+#content .m_right .mybankcard li u .fastpay{height:16px;line-height:16px;padding:0 2px;background:#97a251;color:#fff;display:inline-block;position:relative;vertical-align:top;top:1px;*top:2px}
+#content .m_right .mybankcard li u .fastpay i{display:block;width:6px;height:12px;overflow:hidden;color:#97a251;background:none;font-family:simsun;font-size:12px;position:absolute;top:1px;top:2px\9;left:-6px}
+#content .m_right .mybankcard li span{display:block;width:25px;white-space:nowrap;overflow:hidden;position:absolute;top:102px;left:15px;}
+#content .m_right .mybankcard li span a{margin-right:8px;white-space:nowrap}#content .m_right .mybankcard li .ctime{position:absolute;top:102px;right:13px;color:#666;display:none}
+#content .m_right .mybankcard li .default{margin-right:8px;color:#666;background:#f98f2e;color:#fff;display:none;padding:2px 4px;}#content .m_right .mybankcard li .clsdf{display:none}
+#content .m_right .mybankcard .hover{border:#f90 1px solid}#content .m_right .mybankcard .hfpay li font{font-family:Tahoma, Geneva, sans-serif;font-weight:bold;color:#41ab01;margin-right:5px;font-size:14px}
+#content .m_right .mybankcard .boc{background-position:5px 6px}#content .m_right .mybankcard .alipay{background-position:5px -528px}#content .m_right .mybankcard .cft{background-position:5px -570px}
+#content .m_right .mybankcard .icbc{background-position:5px -383px}#content .m_right .mybankcard .ccb{background-position:5px -60px}#content .m_right .mybankcard .abc{background-position:5px -26px}
+#content .m_right .mybankcard .bcm{background-position:5px -203px}#content .m_right .mybankcard .cgb{background-position:5px -275px}#content .m_right .mybankcard .cmb{background-position:5px -167px}
+#content .m_right .mybankcard .ceb{background-position:5px -94px}#content .m_right .mybankcard .cctb{background-position:5px -130px}#content .m_right .mybankcard .iciba{background-position:5px -310px}
+#content .m_right .mybankcard .psbc{background-position:5px -418px}#content .m_right .mybankcard .hrxj{background-position:5px -490px}
+#content .m_right .mybankcard li.add{border-style:dashed;background:#fcfcfc;text-align:center;line-height:24px;cursor:pointer}
+#content .m_right .mybankcard li.add u{width:22px;height:22px;display:inline-block;position:relative;margin:0;padding:0;margin-top:35px}
+#content .m_right .mybankcard li.add u i{width:22px;height:6px;font-size:0;overflow:hidden;background:#dfdfdf;position:absolute;top:8px;left:0}
+#content .m_right .mybankcard li.add u em{width:6px;height:22px;font-size:0;overflow:hidden;background:#dfdfdf;position:absolute;top:0;left:8px}
+/*bankcard style*/
+#content .m_right .bankcard{padding:15px;padding-left:30px}
+#content .m_right .bankcard li{padding:15px 0 0 0;float:none;margin:0;border:0;border:0;background:none;}
+#content .m_right .bankcard li b{font-size:14px;color:#808080;}#content .m_right .bankcard li .text{font-size:12px;color:#808080;margin-left:70px;line-height:24px}
+#content .m_right .bankcard .cardnum{position:relative}#content .m_right .bankcard .cardnum .cnum{display:none;width:196px;height:32px;overflow:hidden;border:#ffbb76 1px solid;color:#f60;background:#fffcef;font:bold 16px/32px Arial,microsoft yahei;position:absolute;top:-18px;*top:-16px;left:70px;padding:0 6px}
+#content .m_right .bankcard li input{width:200px;border:#c8c8c8 1px solid;padding:8px 4px;display:inline-block;color:#404040;vertical-align:middle;font-size:14px}
+#content .m_right .bankcard li .select{display:inline-block;border:#ccc 1px solid;width:150px;margin-left:-3px;vertical-align:middle;position:relative;text-decoration:none;background:#fff}
+#content .m_right .bankcard li .select font{color:#404040;font-size:14px;height:28px;line-height:28px;display:block;text-indent:5px;cursor:pointer;}
+#content .m_right .bankcard li .select:hover{border-color:#7eb4ea;color:#000;box-shadow:0 0 2px rgba(0,0,0,0.1)}#content .record .srh li .select:hover b u{color:#000}
+#content .m_right .bankcard li .select b{height:14px;height:14px;display:block;position:absolute;top:4px;left:128px;overflow:hidden}
+#content .m_right .bankcard li .select b em{height:14px;height:14px;font-size:14px;font-family:simsun;font-style:normal;display:block;overflow:hidden;line-height:normal;color:#fff;position:absolute;top:-1px;left:0}
+#content .m_right .bankcard li .select b u{height:14px;height:14px;font-size:14px;font-family:simsun;font-style:normal;display:block;overflow:hidden;line-height:normal;color:#666;margin-top:0}
+#content .m_right .bankcard li .tnum{height:24px;line-height:24px;text-align:center;display:inline-block;padding:0 15px;border:#c8c8c8 1px solid;background:#f9f9f9;text-decoration:none;color:#404040;vertical-align:top;margin-left:10px;box-shadow:0 0 2px #dfdfdf;border-radius:1px;vertical-align:middle;font-weight:bold}
+#content .m_right .bankcard li .tnum:hover{border-color:#999;background:#f2f2f2;text-decoration:none;}#content .m_right .bankcard li .read{width:auto;height:auto;border:0;margin-left:70px;margin-right:4px}
+#content .m_right .bankcard li .btn{display:inline-block;width:100px;height:30px;line-height:12px;font-weight:bold;margin-left:70px;color:#fff;border:#ff6701 1px solid;text-align:center;cursor:pointer;background:#f98b3b;box-shadow:1px 1px 2px #dfdfdf;border-radius:2px;}
+#content .m_right .bankcard li .btn:hover{background:#f60;border:#f30 1px solid;}
+/*recharge style*/
+.recharge_msg{width:990px;margin:0 auto;overflow:hidden;color:#333;padding:8px 0;}
+.recharge_msg b{width:14px;height:14px;display:inline-block;background:url(../images/hefanbao_ico.gif) -32px -105px no-repeat;margin-right:5px;vertical-align:middle}
+.recharge{width:988px;border:2px solid #f6f6f6;border-top:0;border-left:0;margin:0 auto;background:#fafafa}
+.recharge h3{color:#404040;padding:15px;text-indent:8px}.recharge h3 font{font-family:Tahoma, Geneva, sans-serif;font-weight:bold;color:#41ab01;margin-right:5px}
+.recharge ul{padding-left:10px;*zoom:1;border:#dee2e5 1px solid;}
+.recharge ul a{width:125px;height:105px;border:#f9f9f9 1px solid;border-top-width:2px;border-bottom-width:0;display:inline-block;margin-left:10px;position:relative;border-top-left-radius:3px;border-top-right-radius:3px;*margin-bottom:-3px}
+.recharge ul a font{display:block;text-align:center;color:#555;margin-top:3px}
+.recharge ul a b{display:none;height:14px;height:14px;position:absolute;bottom:-8px;left:45%;overflow:hidden}
+.recharge ul a b em{height:14px;height:14px;font-size:14px;font-family:simsun;font-style:normal;display:block;overflow:hidden;line-height:normal;color:#fff;position:absolute;top:-1px;left:0}
+.recharge ul a b u{height:14px;height:14px;font-size:14px;font-family:simsun;font-style:normal;display:block;overflow:hidden;line-height:normal;color:#dee2e5;margin-top:0}
+.recharge ul a:hover{border-color:#dee2e5;background:#fdfdfd;text-decoration:none;}.recharge a:hover font{font-weight:bold}.recharge a:hover b{display:block}
+.recharge ul .hover{border-color:#dee2e5;border-top-color:#f98b3b;background:#fff}.recharge .hover font{font-weight:bold}.recharge ul .hover b{display:block}
+.recharge ul a span{width:62px;height:62px;display:block;margin:15px auto 0 auto;background:url(../images/payfor.gif) no-repeat;cursor:pointer}
+.recharge ul a .onlinepay{background-position:0 0}.recharge ul a .mobilepay{background-position:0 -64px}
+.recharge a .bankpay{background-position:0 -126px}.recharge a .recharpay{background-position:0 -189px}
+#recharge{width:990px;margin:8px auto 0 auto;overflow:hidden;*zoom:1;}#recharge .left{width:750px;float:left;overflow:hidden;padding:0 10px;}
+#recharge .left h3{color:#999;padding:6px 0 15px 0;border-bottom:#f2f2f2 1px solid;*margin-bottom:15px}
+#recharge .left h4{padding:15px 0;color:#333;font-size:14px;clear:both;*margin-top:-15px}
+#recharge .left h4 font{color:#f30;font-size:14px}#recharge .left li{overflow:hidden;*zoom:1;}
+#recharge .left li label{display:inline-block;height:40px;float:left;margin-bottom:12px;margin-right:15px}#recharge .left li label input{display:inline-block;vertical-align:middle}
+#recharge .left li label span{width:130px;height:36px;display:inline-block;background:url(../images/bankico.png) no-repeat;margin-left:10px;border:#ddd 1px solid;vertical-align:middle;cursor:pointer}
+#recharge .left li label span:hover{border:#f90 1px solid}#recharge .left li label .hover{border:#f90 1px solid}
+#recharge .left li label .boc{background-position:5px 6px}#recharge .left li label .alipay{background-position:5px -528px}#recharge .left li label .cft{background-position:5px -570px}
+#recharge .left li label .icbc{background-position:5px -383px}#recharge .left li label .ccb{background-position:5px -60px}#recharge .left li label .abc{background-position:5px -26px}
+#recharge .left li label .bcm{background-position:5px -203px}#recharge .left li label .cgb{background-position:5px -275px}#recharge .left li label .cmb{background-position:5px -167px}
+#recharge .left li label .ceb{background-position:5px -94px}#recharge .left li label .cctb{background-position:5px -130px}#recharge .left li label .iciba{background-position:5px -310px}
+#recharge .left li label .psbc{background-position:5px -418px}#recharge .left li label .hrxj{background-position:5px -490px}
+#recharge .left li label .offcard{background-position:5px -605px}#recharge .left li label .lkl{background-position:5px -636px}
+#recharge .left li label .nethui{background-position:5px -668px}
+#recharge .left .money{padding:15px 0;color:#333;font-size:14px;border-top:#f2f2f2 1px solid;margin-top:10px}#recharge .left .money font{color:#666;margin-left:5px}
+#recharge .left .money input{width:100px;border:#c8c8c8 1px solid;padding:6px 4px;display:inline-block;color:#404040;}
+#recharge .left .mb{padding:2px 0;color:#333;font-size:14px;margin-top:10px}#recharge .left .mb font{color:#666;margin-left:5px}
+#recharge .left .mb input{width:120px;border:#c8c8c8 1px solid;padding:6px 4px;display:inline-block;color:#404040;}
+#recharge .left .mb a{height:28px;line-height:28px;text-align:center;display:inline-block;padding:0 15px;border:#c8c8c8 1px solid;background:#f9f9f9;text-decoration:none;color:#333;vertical-align:top;margin-left:10px;box-shadow:0 0 2px #dfdfdf;border-radius:2px;font-size:12px}
+#recharge .left .mb a:hover{border-color:#999;background:#f2f2f2;text-decoration:none;color:#000}
+#recharge .left .save{padding-left:98px;padding-bottom:20px}
+#recharge .left .save input{display:inline-block;width:100px;height:30px;line-height:14px;color:#fff;border:#ff6701 1px solid;text-align:center;cursor:pointer;background:#f98b3b;box-shadow:1px 1px 2px #dfdfdf;border-radius:2px;}
+#recharge .left .save input:hover{background:#f60;border:#f30 1px solid;}
+#recharge .right{width:190px;float:right;overflow:hidden;padding:0 10px 8px 10px;margin-right:10px;background:#ffffe0}
+#recharge .right h3{padding:8px 0 2px 0;color:#333;font-weight:bold}
+#recharge .right h3 b{width:14px;height:14px;display:inline-block;background:url(../images/hefanbao_ico.gif) 0 -105px no-repeat;margin-right:3px;vertical-align:middle}
+#recharge .right h4{padding:8px 0 2px 0;color:#666;font-weight:bold}
+#recharge .right li{line-height:22px;color:#666;}
+/*payrecharge style*/
+#payrecharge{width:990px;margin:5px auto;border-top:#e2e2e2 1px solid;padding-bottom:150px}
+#payrecharge .box_text{width:550px;margin:100px 0 0 300px;}
+#payrecharge .box_text h2{font:26px/1 microsoft yahei,simhei,sans-serif;position:relative;color:#333;}
+#payrecharge .box_text h2 b{width:32px;height:32px;display:block;overflow:hidden;background:url(../images/hefanbao_ico.gif) 0 0 no-repeat;position:absolute;top:0;*top:2px;left:-40px}
+#payrecharge .box_text ul li{color:#999;padding-top:12px;line-height:24px;font-size:14px}
+#payrecharge .box_text ul li span{color:#ff0000;font-size:12px}
+/*payment style*/
+.payment{width:988px;border:2px solid #f6f6f6;border-top:0;border-left:0;margin:10px auto 0 auto;background:#f8fff3;}
+.payment ul{border:1px solid #d3e9c1;padding:10px 22px;*zoom:1;position:relative;}.payment ul li{display:none;line-height:21px;color:#515630}
+.payment ul .tname{line-height:28px;display:block}.payment ul li span{font-size:14px;margin-right:30px;color:#4f5909;font-weight:bold;display:inline-block;vertical-align:middle}
+.payment ul b{display:block;position:absolute;top:10px;right:22px;color:#515630}
+.payment ul li a{display:inline-block;color:#fff;position:relative;width:65px;height:22px;line-height:22px;background:#97a251;padding-left:5px;overflow:hidden;vertical-align:middle}
+.payment ul li a u{height:0;width:0;font-size:0;overflow:hidden;border-width:5px;border-style:solid;border-color:#97a251 #97a251 #fff #97a251;display:block;position:absolute;top:3px;right:4px}
+.payment ul li a .u{border-color:#fff #97a251 #97a251 #97a251;top:9px;}
+.payment ul b font{font-family:Tahoma, Geneva, sans-serif;font-weight:bold;color:#f60;margin-right:5px;font-size:18px;display:inline-block;}
+#payment{width:990px;margin:12px auto 0 auto;overflow:hidden;*zoom:1;}
+#payment .left{width:720px;float:left;overflow:hidden;padding:25px;background:#f9f9f9}
+#payment .left h3{padding:0 0 15px 0;color:#333;font-size:14px;*padding-bottom:26px;font-weight:bold}
+#payment .left h4{padding:15px 0;color:#333;font-size:14px;clear:both;border-top:#e6e6e6 1px solid;*margin-top:8px;*padding-top:7px;}
+#payment .left li{overflow:hidden;*zoom:1;*margin-top:-15px;padding-bottom:10px;}
+#payment .left li label{display:inline-block;height:40px;float:left;margin-bottom:12px;margin-right:15px;}#payment .left li label input{display:inline-block;vertical-align:middle}
+#payment .left li label span{width:130px;height:36px;display:inline-block;background:#fff url(../images/bankico.png) no-repeat;margin-left:10px;border:#ddd 1px solid;vertical-align:middle;cursor:pointer}
+#payment .left .fastpay label span{width:200px;text-align:right;padding-right:8px;*margin-left:4px}#payment .left .fastpay{margin-right:-160px}#payment .left .fastpay label{float:left}
+#payment .left .fastpay label span i{color:#666;display:inline-block;vertical-align:middle;padding-top:10px;margin-right:8px}
+#payment .left .fastpay label span b{height:16px;line-height:16px;padding:0 2px;background:#f98b3b;color:#fff;display:inline-block;position:relative;vertical-align:middle;top:4px}
+#payment .left .fastpay label span b u{display:block;width:6px;height:12px;overflow:hidden;color:#f98b3b;background:none;font-family:simsun;font-size:12px;position:absolute;top:1px;*top:2px;left:-6px}
+#payment .left li .hfpay{height:auto}#payment .left li .hfpay span{height:auto}#payment .left li .hfpay span{background:none;border:none;color:#404040;width:auto;margin-top:-3px;}#payment .left li b{display:none;color:#f30;position:relative;*top:2px}
+#payment .left li label span:hover{border:#f90 1px solid}#payment .left li label .hover{border:#f90 1px solid}#payment .left li .hfpay span:hover{border:0}
+#payment .left li .hfpay span font{font-family:Tahoma, Geneva, sans-serif;font-weight:bold;color:#41ab01;margin-right:5px;font-size:14px}
+#payment .left li label .boc{background-position:5px 6px}#payment .left li label .alipay{background-position:5px -528px}#payment .left li label .cft{background-position:5px -570px}
+#payment .left li label .icbc{background-position:5px -383px}#payment .left li label .ccb{background-position:5px -60px}#payment .left li label .abc{background-position:5px -26px}
+#payment .left li label .bcm{background-position:5px -203px}#payment .left li label .cgb{background-position:5px -275px}#payment .left li label .cmb{background-position:5px -167px}
+#payment .left li label .ceb{background-position:5px -94px}#payment .left li label .cctb{background-position:5px -130px}#payment .left li label .iciba{background-position:5px -310px}
+#payment .left li label .psbc{background-position:5px -418px}#payment .left li label .hrxj{background-position:5px -490px}#payment .left li label .lkl{background-position:5px -636px}
+#payment .left li label .nethui{background-position:5px -668px}
+#payment .left .save{text-align:center;padding:10px 0 20px 0;*padding-top:30px}
+#payment .left .save input{display:inline-block;width:100px;height:30px;line-height:14px;color:#fff;border:#ff6701 1px solid;text-align:center;cursor:pointer;background:#f98b3b;box-shadow:1px 1px 2px #dfdfdf;border-radius:2px;}
+#payment .left .save input:hover{background:#f60;border:#f30 1px solid;}
+#payment .right{width:190px;float:right;overflow:hidden;padding:0 10px 8px 10px;background:#ffffe0}
+#payment .right h3{padding:8px 0 2px 0;color:#333;font-weight:bold}
+#payment .right h3 b{width:14px;height:14px;display:inline-block;background:url(../images/hefanbao_ico.gif) 0 -105px no-repeat;margin-right:3px;vertical-align:middle}
+#payment .right h4{padding:8px 0 2px 0;color:#666;font-weight:bold}
+#payment .right li{line-height:22px;color:#666;}
+/*return OK style*/
+#returnok{width:988px;border:2px solid #f6f6f6;border-top:0;border-left:0;margin:0 auto;background:#f8fff3;*margin-top:11px;}
+#returnok ul{border:1px solid #d3e9c1;padding:30px 22px 40px 22px;*zoom:1;position:relative;}
+#returnok ul b{width:32px;height:32px;display:block;overflow:hidden;background:url(../images/hefanbao_ico.gif) 0 0 no-repeat;position:absolute;top:22px;left:30px;}
+#returnok ul span{margin-left:50px;font:18px/1 microsoft yahei,simhei,sans-serif;color:#515630}
+#returnok ul a{margin-left:8px}#returnok ul ol{display:block;margin:15px 0 0 50px;overflow:hidden}
+#returnok ul ol li{line-height:26px;color:#515630;font-size:14px}#returnok ul span font{color:#f30;font:18px/1 Tahoma,microsoft yahei,simhei}
+#returnok ul ol li u{font-family:simsun;color:#808080;margin:0 10px}
+/*return err style*/
+#returnerr{width:988px;border:2px solid #f6f6f6;border-top:0;border-left:0;margin:0 auto;background:#fffcef;*margin-top:11px;}
+#returnerr ul{border:1px solid #ffbb76;padding:30px 22px 40px 22px;*zoom:1;position:relative;}
+#returnerr ul b{width:32px;height:32px;display:block;overflow:hidden;background:url(../images/hefanbao_ico.gif) -37px 0 no-repeat;position:absolute;top:22px;left:30px;}
+#returnerr ul span{margin-left:50px;font:18px/1 microsoft yahei,simhei,sans-serif;color:#515630}
+/*drawcash style*/
+#drawcash{width:988px;margin:0 auto;margin-top:10px;overflow:hidden;*zoom:1;border:#dee2e5 1px solid}
+#drawcash ul{overflow:hidden;background:#fafafa}
+#drawcash ul h3{padding:12px;color:#333;font:16px microsoft yahei,simhei,sans-serif;font-weight:bold;border-bottom:#dee2e5 1px solid;background:#f6f6f6;position:relative;overflow:hidden}
+#drawcash ul h3 font{font-family:Tahoma, Geneva, sans-serif;font-weight:normal;color:#f60;margin-right:5px;font-size:18px;display:inline-block;}
+#drawcash ul h3 u{color:#666}#drawcash ul h3 span{color:#666;position:absolute;top:12px;right:15px}
+#drawcash ul h4{padding:20px 40px;color:#333;font-size:14px;clear:both;border-top:#f4f4f4 2px solid}
+#drawcash ul li{padding:0 40px;}#drawcash ul h3 span a{color:#666;font-size:14px;font-weight:normal;}
+#drawcash ul li span{width:200px;height:100px;display:inline-block;margin-right:15px;*margin-right:12px;border:#ddd 1px solid;vertical-align:middle;cursor:pointer;background:#fff;margin-bottom:15px;overflow:hidden}
+#drawcash ul li span.default{border-color:#ffbb76;}
+#drawcash ul li span b{width:184px;height:36px;line-height:36px;color:#666;text-indent:135px;display:block;background:#fff url(../images/bankico.png) no-repeat;margin:10px 8px 0 8px;border-bottom:#f2f2f2 1px solid}
+#drawcash ul li span u{display:block;padding:8px;font:12px microsoft yahei,simhei,sans-serif;color:#404040}#drawcash ul li span u font{display:none;margin-left:8px}
+#drawcash ul li span u em{color:#999}#drawcash ul li span.select{border-color:#97a251;box-shadow:0 0 3px #e0e0e0;}
+#drawcash ul li span.select u font{display:inline-block;background:#97a251;color:#fff;padding:1px 3px;}
+#drawcash ul li span.add{border-style:dashed;background:#fff;text-align:center;line-height:24px;cursor:pointer}
+#drawcash ul li span.add span{width:22px;height:22px;display:inline-block;border:0;position:relative;margin:0;padding:0;margin-top:26px}
+#drawcash ul li span.add span i{width:22px;height:6px;font-size:0;overflow:hidden;background:#dfdfdf;position:absolute;top:8px;left:0}
+#drawcash ul li span.add span em{width:6px;height:22px;font-size:0;overflow:hidden;background:#dfdfdf;position:absolute;top:0;left:8px}
+#drawcash ul li .hover{border:#f90 1px solid}#drawcash ul li .hfpay span font{font-family:Tahoma, Geneva, sans-serif;font-weight:bold;color:#41ab01;margin-right:5px;font-size:14px}
+#drawcash ul li .boc{background-position:5px 6px}#drawcash ul li .alipay{background-position:5px -528px}#drawcash ul li .cft{background-position:5px -570px}
+#drawcash ul li .icbc{background-position:5px -383px}#drawcash ul li .ccb{background-position:5px -60px}#drawcash ul li .abc{background-position:5px -26px}
+#drawcash ul li .bcm{background-position:5px -203px}#drawcash ul li .cgb{background-position:5px -275px}#drawcash ul li .cmb{background-position:5px -167px}
+#drawcash ul li .ceb{background-position:5px -94px}#drawcash ul li .cctb{background-position:5px -130px}#drawcash ul li .iciba{background-position:5px -310px}
+#drawcash ul li .psbc{background-position:5px -418px}#drawcash ul li .hrxj{background-position:5px -490px}
+#drawcash ul .cash_money{padding:25px 40px;color:#333;font-size:14px;}
+#drawcash ul .cash_money input{width:130px;border:#e2e2e2 1px solid;padding:6px 4px;display:inline-block;background:#fff;border-top-color:#999;border-left-color:#999;margin:0 4px 0 10px}
+#drawcash ul .mtime{padding:25px 40px;padding-top:0;color:#333;font-size:14px}
+#drawcash ul .mtime label{color:#404040;font-size:14px;margin-left:10px;margin-right:30px}#drawcash ul .mtime label font{color:#999}
+#drawcash ul .cashpass{padding:25px 40px;padding-top:0;color:#333;font-size:14px}#drawcash ul .cashpass b{width:190px;border:#abadb3 1px solid;display:inline-block;margin-left:10px}
+#drawcash ul .cashpass input{padding:3px;margin:1px;*margin:0 1px;width:180px;border:#686868 1px solid;border-bottom-color:#e2e2e2;border-right-color:#e2e2e2;}
+#drawcash ul .save{text-align:left;padding:10px 0 40px 120px;}
+#drawcash ul .save input{display:inline-block;width:100px;height:30px;line-height:14px;color:#fff;border:#ff6701 1px solid;text-align:center;cursor:pointer;background:#f98b3b;box-shadow:1px 1px 2px #dfdfdf;border-radius:2px;}
+#drawcash ul .save input:hover{background:#f60;border:#f30 1px solid;}

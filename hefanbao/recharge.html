@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>盒饭宝－充值中心</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/hefanbao.foucs.js" type="text/javascript"></script>
+<script src="js/hefan-dialog.js" type="text/javascript"></script>
+<script>
+$(function(){
+	var v={
+		id:"pay_ok",
+		title:"完成充值提示",
+		btnText:"已完成付款",
+		clstext:"重新支付",
+		showClose:false}//隐藏右边关闭按钮
+	var html="请在新打开的支付页面上完成付款，付款完成前请不要关闭此窗口。<br>如您在支付过程中遇到问题，请联系客服解决问题！<br><br>";
+	$.hfDialog.show(html,v,function(){return true});
+});
+</script>
+</head>
+<body style="background:#fff">
+<!--盒饭宝头部内容开始-->
+<div id="pay_head">
+<ul><font style="font-size:28px;font-family:microsoft yahei;color:#f60">盒饭宝</font></ul>
+<h2>充值</h2>
+<ul class="rightbar">盒饭宝账户：tianhefan@126.com<span>|</span><a href="javascript:;" class="re_help">充值遇到问题?</a><br /><a href="index.html">进入我的盒饭宝</a><span>|</span><a href="javascript:;">充值记录</a></ul>
+</div>
+<!--主体内容开始-->
+<div class="recharge_msg"><b></b>充值金额不能用于提现！</div>
+<div class="recharge">
+<ul><h3>账户余额：<font>0.00</font>元</h3>
+<a href="javascript:;" class="hover"><span class="onlinepay"></span><font>网上支付</font><b><em>◆</em><u>◆</u></b></a>
+<a href="javascript:;"><span class="mobilepay"></span><font>手机支付</font><b><em>◆</em><u>◆</u></b></a>
+<a href="javascript:;"><span class="recharpay"></span><font>充值卡</font><b><em>◆</em><u>◆</u></b></a>
+<a href="javascript:;"><span class="bankpay"></span><font>银行转账</font><b><em>◆</em><u>◆</u></b></a>
+</ul>
+</div>
+<div id="recharge" class="paytext1">
+<ul class="left">
+<form action="payrecharge.html" method="post" target="_blank">
+<h3>选择支付宝、财付通、银行网银在线充值方式，即时到账</h3>
+<h4>支付宝、财付通第三方支付快速充值，安全可靠</h4>
+<li><label for="alipay"><input type="radio" name="bcpay" id="alipay" checked="checked" /><span class="alipay" title="支付宝"></span></label>
+<label for="cft"><input type="radio" name="bcpay" id="cft" /><span class="cft" title="财付通"></span></label></li>
+<h4>网银快速充值(<font>请确保所选银行卡已开通网上银行</font>)</h4>
+<li>
+<label for="boc"><input type="radio" name="bcpay" id="boc" /><span class="boc" title="中国银行"></span></label>
+<label for="icbc"><input type="radio" name="bcpay" id="icbc" /><span class="icbc" title="中国工商银行"></span></label>
+<label for="ccb"><input type="radio" name="bcpay" id="ccb" /><span class="ccb" title="中国建设银行"></span></label>
+<label for="abc"><input type="radio" name="bcpay" id="abc" /><span class="abc" title="中国农业银行"></span></label>
+<label for="bcm"><input type="radio" name="bcpay" id="bcm" /><span class="bcm" title="中国交通银行"></span></label>
+<label for="cgb"><input type="radio" name="bcpay" id="cgb" /><span class="cgb" title="广发银行"></span></label>
+<label for="cmb"><input type="radio" name="bcpay" id="cmb" /><span class="cmb"  title="招商银行"></span></label>
+<label for="ceb"><input type="radio" name="bcpay" id="ceb" /><span class="ceb" title="中国光大银行"></span></label>
+<label for="cctb"><input type="radio" name="bcpay" id="cctb" /><span class="cctb" title="中信银行"></span></label>
+<label for="hrxj"><input type="radio" name="bcpay" id="hrxj" /><span class="hrxj" title="华融湘江银行"></span></label>
+<label for="iciba"><input type="radio" name="bcpay" id="iciba" /><span class="iciba" title="湖南省农村信用社"></span></label>
+<label for="psbc"><input type="radio" name="bcpay" id="psbc" /><span class="psbc" title="中国邮政储蓄银行"></span></label>
+</li>
+<li class="money">输入充值金额：<input name="money" type="text" /><font>元</font></li>
+<li class="save"><input type="submit" value="确定充值" class="pay_ok"  /></li>
+</form>
+</ul>
+<ul class="right">
+<h3><b></b>充值遇到问题</h3>
+<li><a href="#">[充值帮助]盒饭宝充值操作步骤</a></li>
+<h4>1. 网上银行使用须知</h4>
+<li>建议使用IE8及以上浏览器，操作过程中请勿按浏览器“后退”键<br />提交支付后，将转入银行的网站，请根据页面提示操作<br /><a href="#">如何开通网上银行?</a></li>
+<h4>2. 提交后页面打不开，可以尝试</h4>
+<li>过3分钟后再刷新页面<br />清理IE缓存，卸载相关插件或google工具条<br />换个浏览器或换个上网环境再试<br />联系客服进行解决或拨打客服热线</li>
+</ul>
+</div>
+
+<div id="recharge" class="paytext2" style="display:none">
+<ul class="left">
+<form action="payrecharge.html" method="post" target="_blank">
+<h3>手机支付快捷、安全更方便</h3>
+<li class="mb">输入充值金额：<input name="money" type="text" /><font>元</font></li>
+<li class="mb" style="padding-left:28px">手机号码：<input name="money" type="text" /><a href="#">获取验证码</a></li>
+<li class="mb" style="padding-left:42px">验证码：<input name="money" type="text" /></li>
+<li class="save" style="margin-top:15px"><input type="submit" value="确定充值" class="pay_ok" /></li>
+</form>
+</ul>
+<ul class="right">
+<h3><b></b>充值遇到问题</h3>
+<li>手机支付快捷、安全更方便!<br />如有相关充值问题可以联系客服进行解决或拨打客服热线</li>
+</ul>
+</div>
+
+<div id="recharge" class="paytext3" style="display:none">
+<ul class="left">
+<form action="payrecharge.html" method="post" target="_blank">
+<h3>充值卡充值，快速安全，及时到账</h3>
+<h4>选择充值卡</h4>
+<li><label for="offcard"><input type="radio" name="bcpay" id="offcard" /><span class="offcard" title="充值宝卡"></span></label>
+<label for="lkl"><input type="radio" name="bcpay" id="lkl" /><span class="lkl" title="拉卡拉"></span></label>
+<label for="nethui"><input type="radio" name="bcpay" id="nethui" /><span class="nethui" title="网汇充值"></span></label></li>
+<li class="money">输入充值金额：<input name="money" type="text" /><font>元</font></li>
+<li class="save"><input type="submit" value="确定充值" class="pay_ok" /></li>
+</form>
+</ul>
+<ul class="right">
+<h3><b></b>充值遇到问题</h3>
+<li>在您使用充值卡充值时，为了保证账单号及时接收，请确保手机畅通<br />如有相关充值问题可以联系客服进行解决或拨打客服热线</li>
+</ul>
+</div>
+
+<div id="recharge" class="paytext4" style="display:none">
+<ul class="left">
+<form action="payrecharge.html" method="post" target="_blank">
+<h3>银行汇款充值</h3>
+<h4><strong>第一步</strong></h4>
+<li>到银行柜台或使用网上转账打款到公司指定账户</li>
+<h4><strong>第二步</strong></h4>
+<li>汇款完成后，联系客服人员告知需要充值的账户类型、汇款的金额、汇款人姓名、汇出银行、汇入银行、盒饭中国用户名等信息</li>
+<h4><strong>第三步</strong></h4>
+<li>盒饭中国客服人员确认汇款到账，并为指定的用户名进行充值</li>
+<h4><strong>公司账户</strong></h4>
+<li>中国工商银行衡阳市解放路支行&nbsp;&nbsp;&nbsp;&nbsp;账号：6222 0219 0500 2989 653&nbsp;&nbsp;&nbsp;&nbsp;开户名：杰沃科技</li>
+<li style="padding:8px 0 25px"><font color="red">请您在汇款成功后与客服联系：0734-8569265</font></li>
+</form>
+</ul>
+<ul class="right">
+<h3><b></b>充值遇到问题</h3>
+<li>银行汇款成功后将在3-5个工作日（周日除外）到账<br />若您急于充值，推荐使用其他在线充值通道</li>
+</ul>
+</div>
+
+<!--盒饭宝底部内容开始-->
+<div id="footer">&copy; 2013 盒饭网 <a href="#">联系客服</a></div>
+</body>
+</html>

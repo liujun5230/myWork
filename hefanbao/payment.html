@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>盒饭宝－付款</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/hefanbao.foucs.js" type="text/javascript"></script>
+<script src="js/hefan-dialog.js" type="text/javascript"></script>
+<script>
+$(function(){
+	//如果是余额和快捷支付时调用
+	var v={
+		id:"pay_ok",
+		title:"请输入支付密码",
+		btnText:"确定支付",
+		clscancel:false,
+		width:230};
+	var html="<ul><li style=\"width:190px;border:#abadb3 1px solid;margin-bottom:-15px\"><input type=password name=paypass class=paypass style=\"padding:3px;margin:1px;*margin:0 1px;width:180px;border:#686868 1px solid;border-bottom-color:#e2e2e2;border-right-color:#e2e2e2\" /></li><span class=\"err\" style=\"margin:25px 0 -10px 6px;display:none\"><em>◆<u>◆</u></em><i></i>请输入您的支付密码！</span></ul>";
+	var submit=function(){
+		if($(".paypass").val()==""){$(".paypass").focus().parent().next().css("display","inline-block");return false};
+		//开始异步验证支付密码code...
+		if($(".paypass").val()!="123456"){$(".paypass").focus().parent().next().css("display","inline-block").html("<em>◆<u>◆</u></em><i></i>支付密码错误，请重新输入！");return false};
+		window.location.href="return_ok.html";return true;
+		return true;
+	}
+	$.hfDialog.show(html,v,submit);
+});
+</script>
+</head>
+<body>
+<!--盒饭宝头部内容开始-->
+<div id="pay_head">
+<ul><font style="font-size:28px;font-family:microsoft yahei;color:#f60">盒饭宝</font></ul>
+<h2>付款</h2>
+<ul class="rightbar">盒饭宝账户：tianhefan@126.com<span>|</span><a href="javascript:;" class="re_help">付款遇到问题?</a><br /><a href="index.html">进入我的盒饭宝</a><span>|</span><a href="javascript:;">交易明细</a></ul>
+</div>
+<!--主体内容开始-->
+<div class="payment">
+<ul><b>应支付：<font class="payprice">15.00</font>元</b>
+<li class="tname"><span>名称：农家小炒肉</span><span>商家：东方快餐</span><a href="javascript:;">订单详情<u></u></a></li>
+<li>真实姓名：张小三</li>
+<li>联系地址：湖南省，衡阳，雁峰区，中山南路80号 时代广场</li>
+<li>手机号码：13875489960</li>
+<li>下单时间：2013-06-20 10:29:50</li>
+<li>订单方式：外卖</li>
+<li>交易编号：2013062000100078000112053</li>
+</ul>
+</div>
+<div id="payment">
+<ul class="left">
+<form action="" method="">
+<h3>余额支付(快速完成付款)</h3>
+<li><label for="hfb" class="hfpay"><input type="checkbox" name="hfb" id="hfb" /><span title="余额支付">账户（tianhefan@126.com）可支付余额：<font>8.00</font>元</span></label><b>(您的余额不足，请<a href="recharge.html">立即充值</a>完成付款，或选择以下支付方式完成付款)</b></li>
+<h4>快捷支付(信用卡)</h4>
+<li class="fastpay">
+<label for="rord_icbc"><input type="radio" name="bcpay" id="rord_icbc" /><span class="icbc" title="中国工商银行"><i>**9274</i><b><u>◆</u>快捷</b></span></label>
+<label for="rord_ccb"><input type="radio" name="bcpay" id="rord_ccb" /><span class="ccb" title="中国建设银行"><i>**9274</i><b><u>◆</u>快捷</b></span></label>
+<label for="rord_boc"><input type="radio" name="bcpay" id="rord_boc" /><span class="boc" title="中国银行"><i>**9274</i><b><u>◆</u>快捷</b></span></label>
+<label for="rord_abc"><input type="radio" name="bcpay" id="rord_abc" /><span class="abc" title="中国农业银行"><i>**9274</i><b><u>◆</u>快捷</b></span></label>
+<label for="rord_bcm"><input type="radio" name="bcpay" id="rord_bcm" /><span class="bcm" title="中国交通银行"><i>**9274</i><b><u>◆</u>快捷</b></span></label>
+<label for="rord_cgb"><input type="radio" name="bcpay" id="rord_cgb" /><span class="cgb" title="广发银行"><i>**9274</i><b><u>◆</u>快捷</b></span></label>
+<label for="rord_cmb"><input type="radio" name="bcpay" id="rord_cmb" /><span class="cmb"  title="招商银行"><i>**9274</i><b><u>◆</u>快捷</b></span></label>
+</li>
+<h4>支付平台(推荐支付宝/财付通)</h4>
+<li><label for="alipay"><input type="radio" name="bcpay" id="alipay" /><span class="alipay" title="支付宝"></span></label>
+<label for="cft"><input type="radio" name="bcpay" id="cft" /><span class="cft" title="财付通"></span></label>
+<label for="lkl"><input type="radio" name="bcpay" id="lkl" /><span class="lkl" title="拉卡拉"></span></label>
+<label for="nethui"><input type="radio" name="bcpay" id="nethui" /><span class="nethui" title="网汇"></span></label></li>
+<h4>网银支付(需要开通网上银行)</h4>
+<li>
+<label for="boc"><input type="radio" name="bcpay" id="boc" /><span class="boc" title="中国银行"></span></label>
+<label for="icbc"><input type="radio" name="bcpay" id="icbc" /><span class="icbc" title="中国工商银行"></span></label>
+<label for="ccb"><input type="radio" name="bcpay" id="ccb" /><span class="ccb" title="中国建设银行"></span></label>
+<label for="abc"><input type="radio" name="bcpay" id="abc" /><span class="abc" title="中国农业银行"></span></label>
+<label for="bcm"><input type="radio" name="bcpay" id="bcm" /><span class="bcm" title="中国交通银行"></span></label>
+<label for="cgb"><input type="radio" name="bcpay" id="cgb" /><span class="cgb" title="广发银行"></span></label>
+<label for="cmb"><input type="radio" name="bcpay" id="cmb" /><span class="cmb"  title="招商银行"></span></label>
+<label for="ceb"><input type="radio" name="bcpay" id="ceb" /><span class="ceb" title="中国光大银行"></span></label>
+<label for="cctb"><input type="radio" name="bcpay" id="cctb" /><span class="cctb" title="中信银行"></span></label>
+<label for="hrxj"><input type="radio" name="bcpay" id="hrxj" /><span class="hrxj" title="华融湘江银行"></span></label>
+<label for="iciba"><input type="radio" name="bcpay" id="iciba" /><span class="iciba" title="湖南省农村信用社"></span></label>
+<label for="psbc"><input type="radio" name="bcpay" id="psbc" /><span class="psbc" title="中国邮政储蓄银行"></span></label>
+</li>
+<li class="save"><input type="button" value="确定去付款" class="pay_ok" /></li>
+</form>
+</ul>
+<ul class="right">
+<h3><b></b>付款遇到问题</h3>
+<li><a href="#">[支付帮助]盒饭宝支付操作步骤</a></li>
+<h4>1. 盒饭宝余额支付</h4>
+<li>推荐使用余额支付，安全、快捷，一键完成支付，轻松享受美食<br /><a href="recharge.html">给你的盒饭宝充值吧！</a></li>
+<h4>2. 网上银行使用须知</h4>
+<li>建议使用IE8及以上浏览器，操作过程中请勿按浏览器“后退”键<br />提交支付后，将转入银行的网站，请根据页面提示操作<br /><a href="#">如何开通网上银行?</a></li>
+<h4>3. 提交后页面打不开，可以尝试</h4>
+<li>过3分钟后再刷新页面<br />清理IE缓存，卸载相关插件或google工具条<br />换个浏览器或换个上网环境再试<br />联系客服进行解决或拨打客服热线</li>
+</ul>
+</div>
+
+<!--盒饭宝底部内容开始-->
+<div id="footer">&copy; 2013 盒饭网 <a href="#">联系客服</a></div>
+</body>
+</html>
